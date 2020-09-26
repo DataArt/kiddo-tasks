@@ -1,0 +1,26 @@
+sceneType: console
+winButton:
+  url: ./task23
+  text: Следующий уровень
+initialScript: |
+  import console
+
+  # Добавь код здесь
+  
+taskDescription: >-
+  Выведи строку из переменной "c" в консоль "n" раз.
+
+generatingFunc: >-
+  this.addConsoleVariable('c', ['cat', 'dog'][Math.round(Math.random())], true);
+  this.addConsoleVariable('n', Math.round(Math.random() * Math.floor(5)) + 2, true);
+
+  this.addCheckingLogic(`
+    let res = this.consoleContent.reduce((sum, current) => {
+      return current === this.getVariableValue("c") ? sum + 1 : sum;
+    }, 0)
+    if (res === this.getVariableValue("n")) {
+      return null;
+    } else {
+      return "TASK_DONE_WRONG";
+    }
+  `)

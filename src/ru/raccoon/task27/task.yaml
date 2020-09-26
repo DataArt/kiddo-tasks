@@ -1,0 +1,24 @@
+sceneType: Raccoon
+generatingFunc: >-
+    const gameField = [ ['RO', 'RO', 'GR', 'GR', 'GR', 'FI'],
+                        ['RO', 'RO', 'RO', 'GR', 'GR', 'RO'],
+                        ['RO', 'GR', 'RO', 'RO', 'GR', 'RO'],
+                        ['RO', 'GR', 'GR', 'RO', 'RO', 'RO'],
+                        ['RO', 'GR', 'GR', 'GR', 'GR', 'RO'],
+                        ['RO', 'RO', 'RO', 'RO', 'RO', 'RO']
+                       ];
+    this.setGameField(gameField);
+    this.setPlayerPosition(0, 0);
+    this.addTurrets([0, 4]);
+    this.addMonster([5, 1], 'DOWN');
+    this.addMonster([2, 2], 'RIGHT');
+    this.addCheckingLogic('return this.player.position.x === 5 && this.player.position.y === 0 ? null : `FINISH_NOT_REACHED`');
+winButton:
+  url: ./task28
+  text: Следующий уровень
+initialScript: |
+  import raccoon
+
+  # Добавь код здесь
+  
+taskDescription: Опять на пути к флагу монстры, одного из них еще и никак не обойти! Тут тебе поможет пушка (самонаводящаяся, многозарядная!). Подбери ее, установи (*raccoon.place_turret()*) рядом с маршрутом следования монстра и подожди ее залпа. Путь свободен - доберись до финиша!

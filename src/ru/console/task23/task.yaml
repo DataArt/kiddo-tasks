@@ -1,0 +1,29 @@
+sceneType: console
+# winButton:
+#   url: ./task24
+#   text: Следующий уровень
+initialScript: |
+  import console
+
+  # Добавь код здесь
+  
+taskDescription: >-
+  Проделай "n" итераций, на каждом чётном шаге которой прибавляй в переменную "c" число 3, а на каждом нечётном шаге - умножай значение "c" на 2.
+  После выведи значение переменной "c" в консоль.
+
+generatingFunc: >-
+  this.addConsoleVariable('n', Math.floor(Math.random() * Math.floor(9) + 1), true);
+  this.addConsoleVariable('c', 0);
+
+  this.addCheckingLogic(`
+    let sum = 0;
+    for (let i = 0; i < this.getVariableValue("n"); i++) {
+      sum = i % 2 === 0 ? sum + 3 : sum * 2;
+    }
+
+    if (this.consoleContent.includes(sum.toString())) {
+      return null;
+    } else {
+      return "TASK_DONE_WRONG";
+    }
+  `)

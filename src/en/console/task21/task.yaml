@@ -1,0 +1,21 @@
+sceneType: console
+winButton:
+  url: ./task22
+  text: Next level
+initialScript: |
+  import console
+
+  # Add your code here
+  
+taskDescription: >-
+  Display the word "Python" on the console "n" times without moving to new line.
+
+generatingFunc: >-
+  this.addConsoleVariable('n', Math.round(Math.random() * Math.floor(5)) + 2, true);
+  this.addCheckingLogic(`
+    if (this.consoleContent.includes('Python'.repeat(this.getVariableValue('n')))) {
+      return null;
+    } else {
+      return "TASK_DONE_WRONG";
+    }
+  `)

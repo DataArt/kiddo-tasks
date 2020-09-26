@@ -1,0 +1,30 @@
+sceneType: console
+# winButton:
+#   url: ./task24
+#   text: Next level
+initialScript: |
+  import console
+
+  # Add your code here
+  
+taskDescription: >-
+  Perform "n" iterations, taking each even step of which add 3 to "c" variable while taking each odd step multiply "c" variable by 2.
+  Afterwards, display "c" variable value on the console.
+
+
+generatingFunc: >-
+  this.addConsoleVariable('n', Math.floor(Math.random() * Math.floor(9) + 1), true);
+  this.addConsoleVariable('c', 0);
+
+  this.addCheckingLogic(`
+    let sum = 0;
+    for (let i = 0; i < this.getVariableValue("n"); i++) {
+      sum = i % 2 === 0 ? sum + 3 : sum * 2;
+    }
+
+    if (this.consoleContent.includes(sum.toString())) {
+      return null;
+    } else {
+      return "TASK_DONE_WRONG";
+    }
+  `)

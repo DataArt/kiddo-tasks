@@ -1,0 +1,21 @@
+sceneType: Raccoon
+generatingFunc: >-
+  this.setPlayerPosition(1, 0);
+  this.setGameField([
+    ['BU', 'RO', 'BU', 'BU', 'BU', 'BU'],
+    ['BU', 'RO', 'GR', 'RO', 'RO', 'RO'],
+    ['BU', 'RO', 'RO', 'RO', 'GR', 'RO'],
+    ['BU', 'RO', 'RO', 'GR', 'GR', 'FI'],
+    ['BU', 'GR', 'GR', 'GR', 'OF', 'OF'],
+    ['BU', 'GR', 'GR', 'GR', 'OF', 'GR']
+  ]);
+  this.addCheckingLogic('return this.player.position.x === 5 && this.player.position.y === 3 ? null : "FINISH_NOT_REACHED"');
+winButton:
+  url: ./task7
+  text: Следующий уровень
+initialScript: |
+  import raccoon
+
+  # Добавь код здесь
+  
+taskDescription: Ты познакомился с основными методами движения Енота, и дальше тебе предстоит самостоятельно ими пользоваться! Для начала доведи Енота до флага. Если забудешь, как пишутся команды и для чего они нужны, вызови Помощь (кнопка "?" панели над редактором кода ).

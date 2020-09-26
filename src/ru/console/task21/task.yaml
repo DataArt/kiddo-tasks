@@ -1,0 +1,21 @@
+sceneType: console
+winButton:
+  url: ./task22
+  text: Следующий уровень
+initialScript: |
+  import console
+
+  # Добавь код здесь
+  
+taskDescription: >-
+  Выведи слово "Python" в консоль "n" раз без перевода строки.
+
+generatingFunc: >-
+  this.addConsoleVariable('n', Math.round(Math.random() * Math.floor(5)) + 2, true);
+  this.addCheckingLogic(`
+    if (this.consoleContent.includes('Python'.repeat(this.getVariableValue('n')))) {
+      return null;
+    } else {
+      return "TASK_DONE_WRONG";
+    }
+  `)

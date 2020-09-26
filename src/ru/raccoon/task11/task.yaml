@@ -1,0 +1,29 @@
+sceneType: Raccoon
+generatingFunc: >-
+  this.setPlayerPosition(5, 10  );
+  this.setGameField([
+      ['GR', 'GR', 'GR', 'GR', 'GR', 'FI', 'GR', 'GR', 'GR', 'GR', 'GR'],
+      ['GR', 'GR', 'GR', 'GR', 'RO', 'RO', 'RO', 'GR', 'GR', 'GR', 'GR'],
+      ['GR', 'GR', 'GR', 'GR', 'GR', 'RO', 'GR', 'GR', 'GR', 'GR', 'GR'],
+      ['GR', 'GR', 'GR', 'RO', 'RO', 'RO', 'RO', 'RO', 'GR', 'GR', 'GR'],
+      ['GR', 'GR', 'GR', 'GR', 'GR', 'RO', 'GR', 'GR', 'GR', 'GR', 'GR'],
+      ['GR', 'GR', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'GR', 'GR'],
+      ['GR', 'GR', 'GR', 'GR', 'GR', 'RO', 'GR', 'GR', 'GR', 'GR', 'GR'],
+      ['GR', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'GR'],
+      ['GR', 'GR', 'GR', 'GR', 'GR', 'RO', 'GR', 'GR', 'GR', 'GR', 'GR'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],
+      ['GR', 'GR', 'GR', 'GR', 'GR', 'RO', 'GR', 'GR', 'GR', 'GR', 'GR'],
+    ]);
+  this.addCookies([0, 9], [10, 9], [1, 7], [9, 7], [2, 5], [8, 5], [3, 3], [7, 3], [4, 1], [6, 1]);
+  this.addCustomTile('ST', 'https://i.imgur.com/ZKCX48X.png');
+  this.addCustomTile('GR', 'https://i.imgur.com/ELvTBrD.png');
+  this.addCheckingLogic('return this.player.position.x === 5 && this.player.position.y === 0 ? null : "FINISH_NOT_REACHED"');
+winButton:
+  url: ./task12
+  text: Следующий уровень
+initialScript: |
+  import raccoon
+
+  # Добавь код здесь
+  
+taskDescription: Да, уж! Здесь устанешь писать код, чтобы довести Енота до флага. Неужели не найдётся что-то в помощь? Конечно! Раньше последовательность команд всегда выполнялась по порядку строго сверху вниз. А теперь надо, чтобы программа принимала решение и выполняла различные действия в зависимости от ситуации. Этого можно достичь при помощи оператора while. Подробнее про него можно прочитать <a href="https://pythonworld.ru/osnovy/cikly-for-i-while-operatory-break-i-continue-volshebnoe-slovo-else.html" target="_blank" rel="nofollow" class="i18n-link">здесь</a>

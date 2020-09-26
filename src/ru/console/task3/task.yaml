@@ -1,0 +1,16 @@
+sceneType: console
+winButton:
+  url: ./task4
+  text: Следующий уровень
+initialScript: |
+  import console
+
+  # Добавь код здесь
+  
+taskDescription: 'Запиши сумму значений переменных "a" и "b" в переменную "c".'
+generatingFunc: >-
+  this.addConsoleVariable('a', Math.floor(Math.random() * Math.floor(6)));
+  this.addConsoleVariable('b', Math.floor(Math.random() * Math.floor(6)));
+  this.addConsoleVariable('c');
+  this.addCheckingLogic('return this.getVariableValue("c") === this.getVariableValue("a") + this.getVariableValue("b") ? null : "TASK_DONE_WRONG" ');
+

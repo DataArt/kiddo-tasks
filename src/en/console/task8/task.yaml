@@ -1,0 +1,15 @@
+sceneType: console
+winButton:
+  url: ./task9
+  text: Next level
+initialScript: |
+  import console
+
+  # Add your code here
+  
+taskDescription: 'Divide "a" variable value by "b" variable value by exact division and write the quotient in "c" variable.'
+generatingFunc: >-
+  this.addConsoleVariable('a', Math.floor(Math.random() * Math.floor(8)));
+  this.addConsoleVariable('b', Math.floor(Math.random() * Math.floor(6)));
+  this.addConsoleVariable('c');
+  this.addCheckingLogic(' return this.getVariableValue("c") === Math.floor(this.getVariableValue("a") / this.getVariableValue("b")) ? null : "TASK_DONE_WRONG" ');

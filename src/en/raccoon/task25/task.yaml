@@ -1,0 +1,17 @@
+sceneType: Raccoon
+generatingFunc: >-
+    const gameField = [ ['RO', 'RO', 'GR', 'GR', 'GR', 'FI'], ['GR', 'RO', 'RO', 'GR', 'GR', 'RO'], ['GR', 'GR', 'RO', 'RO', 'GR', 'RO'], ['GR', 'GR', 'GR', 'RO', 'GR', 'RO'], ['GR', 'GR', 'GR', 'RO', 'RO', 'RO'], ['GR', 'GR', 'GR', 'GR', 'GR', 'RO']];
+    this.setGameField(gameField);
+    this.setPlayerPosition(0, 0);
+    this.addMines([2, 1]);
+    this.addMonster([5, 1], 'DOWN');
+    this.addCheckingLogic('return this.player.position.x === 5 && this.player.position.y === 0 ? null : `FINISH_NOT_REACHED`');
+winButton:
+  url: ./task26
+  text: Next level
+initialScript: |
+  import raccoon
+
+  # Add your code here
+  
+taskDescription: On the way to the finish a monster is on the beat and it seems impossible to avoid it… Just try to get rid of it using a mine. Pick it up, set it on the monster’s way (*raccoon.set_mine()*), and remember to stay at least one cell away. Wait (*raccoon.wait(the number of steps)*) until the monster steps onto it. BOOM! Then you get to the finish!

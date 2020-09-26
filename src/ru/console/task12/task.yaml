@@ -1,0 +1,19 @@
+sceneType: console
+winButton:
+  url: ./task13
+  text: Следующий уровень
+initialScript: |
+  import console
+
+  # Добавь код здесь
+  
+taskDescription: 'Если значение переменной "b", умноженное на 2, больше или равно значения переменной "a", то присвоить переменной "c" сумму переменных "a" и "b", иначе – их произведение.'
+generatingFunc: >-
+  this.addConsoleVariable('a', Math.floor(Math.random() * Math.floor(10)));
+  this.addConsoleVariable('b', Math.floor(Math.random() * Math.floor(5)));
+  this.addConsoleVariable('c');
+  this.addCheckingLogic(`
+    if (this.getVariableValue("b") * 2 >= this.getVariableValue("a") && this.getVariableValue("c") === this.getVariableValue("a") + this.getVariableValue("b")) return null;
+    else if (this.getVariableValue("c") === this.getVariableValue("a") * this.getVariableValue("b")) return null;
+    else return "TASK_DONE_WRONG";
+  `);

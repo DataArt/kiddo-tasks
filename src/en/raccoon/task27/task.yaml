@@ -1,0 +1,24 @@
+sceneType: Raccoon
+generatingFunc: >-
+    const gameField = [ ['RO', 'RO', 'GR', 'GR', 'GR', 'FI'],
+                        ['RO', 'RO', 'RO', 'GR', 'GR', 'RO'],
+                        ['RO', 'GR', 'RO', 'RO', 'GR', 'RO'],
+                        ['RO', 'GR', 'GR', 'RO', 'RO', 'RO'],
+                        ['RO', 'GR', 'GR', 'GR', 'GR', 'RO'],
+                        ['RO', 'RO', 'RO', 'RO', 'RO', 'RO']
+                       ];
+    this.setGameField(gameField);
+    this.setPlayerPosition(0, 0);
+    this.addTurrets([0, 4]);
+    this.addMonster([5, 1], 'DOWN');
+    this.addMonster([2, 2], 'RIGHT');
+    this.addCheckingLogic('return this.player.position.x === 5 && this.player.position.y === 0 ? null : `FINISH_NOT_REACHED`');
+winButton:
+  url: ./task28
+  text: Next level
+initialScript: |
+  import raccoon
+
+  # Add your code here
+  
+taskDescription: There are again monsters on the way to the flag. To make matters worse, you can’t avoid one of them! A turret (self-guided and multi-charge). Pick it up, set it near the monster’s way and wait for its salvo. The way is clear-get to the finish!

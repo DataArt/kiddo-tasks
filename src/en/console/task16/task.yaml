@@ -1,0 +1,24 @@
+sceneType: console
+winButton:
+  url: ./task17
+  text: Next level
+initialScript: |
+  import console
+
+  # Add your code here
+  
+taskDescription: >-
+  If "a" variable value is equal to 1, assign "c" variable the sum of "a" and "b" variables.
+  If "a" variable value is equal to 1, assign "c" variable the difference of "a" and "b" variables.
+  If "a" variable value is equal to 0, assign "c" variable value of 0.
+
+generatingFunc: >-
+  this.addConsoleVariable('a', Math.round(Math.random() * Math.floor(2)), true);
+  this.addConsoleVariable('b', Math.round(Math.random() * Math.floor(5)), true);
+  this.addConsoleVariable('c');
+  this.addCheckingLogic(`
+    if (this.getVariableValue("a") === 2 && this.getVariableValue("c") === this.getVariableValue("a") + this.getVariableValue("b"))  return null;
+    else if (this.getVariableValue("a") === 1 && this.getVariableValue("c") === this.getVariableValue("b") - this.getVariableValue("a")) return null;
+    else if (this.getVariableValue("a") === 0 && this.getVariableValue("c") === 0) return null;
+    else return "TASK_DONE_WRONG"
+  `);

@@ -1,0 +1,21 @@
+sceneType: Raccoon
+generatingFunc: >-
+  this.setPlayerPosition(1, 0);
+  this.setGameField([
+    ['BU', 'RO', 'BU', 'BU', 'BU', 'BU'],
+    ['BU', 'RO', 'GR', 'RO', 'RO', 'RO'],
+    ['BU', 'RO', 'RO', 'RO', 'GR', 'RO'],
+    ['BU', 'RO', 'RO', 'GR', 'GR', 'FI'],
+    ['BU', 'GR', 'GR', 'GR', 'OF', 'OF'],
+    ['BU', 'GR', 'GR', 'GR', 'OF', 'GR']
+  ]);
+  this.addCheckingLogic('return this.player.position.x === 5 && this.player.position.y === 3 ? null : "FINISH_NOT_REACHED"');
+winButton:
+  url: ./task7
+  text: Next level
+initialScript: |
+  import raccoon
+
+  # Add your code here
+  
+taskDescription: You have got acquainted with the main methods to move Raccoon and to proceed you have to learn to use them on your own. To begin with, take Raccoon to the flag. If you forget how to write commands and why they are necessary, you can get some help (“?” button on the bar tool above the code editor).

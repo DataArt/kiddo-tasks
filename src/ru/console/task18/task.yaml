@@ -1,0 +1,31 @@
+sceneType: console
+winButton:
+  url: ./task19
+  text: Следующий уровень
+initialScript: |
+  import console
+
+  # Добавь код здесь
+  
+taskDescription: >-
+  Если значение "a" больше 5 и чётное, то переменной "c" присвоить значение "a", делённое на 2.
+  Если значение "a" меньше или равно 5 или равно значению "b", то переменной "c" присвоить значение переменной "b".
+  Иначе переменной "c" присвоить значение переменной 0.
+
+generatingFunc: >-
+  this.addConsoleVariable('a', Math.round(Math.random() * Math.floor(10)), true);
+  this.addConsoleVariable('b', Math.round(Math.random() * Math.floor(10)), true);
+  this.addConsoleVariable('c');
+
+  this.addCheckingLogic(`
+    if (this.getVariableValue("a") > 5 && this.getVariableValue("a") % 2 === 0 && this.getVariableValue("c") === this.getVariableValue("a") / 2)  {
+      return null;
+    }
+    else if (this.getVariableValue("a") <=5 || this.getVariableValue("a") === this.getVariableValue("b") && this.getVariableValue("c") === this.getVariableValue("b")) {
+      return null;
+    }
+    else if (this.getVariableValue("c") === 0) return null;
+    else return "TASK_DONE_WRONG";
+  `);
+
+

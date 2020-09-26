@@ -1,0 +1,25 @@
+sceneType: console
+winButton:
+  url: ./task21
+  text: Следующий уровень
+initialScript: |
+  import console
+
+  # Добавь код здесь
+  
+taskDescription: >-
+  Пока значение переменной "n" больше единицы, прибавляй к значению переменной "z" число 5 и отнимай из "n" число 2. Выведи значение переменной "z" в консоль.
+
+generatingFunc: >-
+  this.addConsoleVariable('n', Math.round(Math.random() * Math.floor(5)) + 2, true);
+  this.addConsoleVariable('z');
+  this.addCheckingLogic(`
+    if (this.consoleContent.includes(this.getVariableValue("z").toString())) {
+        return null;
+    } else {
+        return "TASK_DONE_WRONG";
+    }
+  `)
+
+
+

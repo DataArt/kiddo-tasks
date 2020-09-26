@@ -1,0 +1,27 @@
+sceneType: Raccoon
+generatingFunc: >-
+  this.setPlayerPosition(0, 7);
+  this.setGameField([
+      ['BU', 'GR', 'BU', 'GR', 'BU', 'BU', 'RO', 'BU'],
+      ['BU', 'FI', 'RO', 'RO', 'RO', 'RO', 'RO', 'OF'],
+      ['BU', 'RO', 'BU', 'BU', 'RO', 'BU', 'RO', 'RO'],
+      ['BU', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],
+      ['BU', 'OF', 'BU', 'RO', 'OF', 'GR', 'RO', 'RO'],
+      ['BU', 'GR', 'GR', 'RO', 'GR', 'RO', 'RO', 'OF'],
+      ['BU', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'GR'],
+      ['RO', 'RO', 'RO', 'BU', 'BU', 'BU', 'RO', 'BU']
+    ]);
+  this.addCookies([2, 7], [5, 1], [6, 5], [7, 2], [3, 3]);
+  this.addMonster([ [3, 4], [3, 5], [3, 6] ], 'DOWN');
+  this.addMonster([ [6, 0], [6, 4], [6, 7] ], 'DOWN');
+  this.addCheckingLogic('return this.player.position.x === 1 && this.player.position.y === 1 ? null : "FINISH_NOT_REACHED"');
+winButton:
+  url: ./task20
+  text: Next level
+initialScript: |
+  import raccoon
+
+  # Add your code here
+  
+taskDescription: >-
+  This character needs your help to pick up all the cookies, escape from the monsters and get to the flag!

@@ -1,0 +1,28 @@
+sceneType: Raccoon
+generatingFunc: >-
+  this.setPlayerPosition(1, 4);
+  this.setGameField([
+      ['RO', 'RO', 'RO', 'RO', 'RO'],
+      ['RO', 'BU', 'BU', 'BU', 'RO'],
+      ['RO', 'BU', 'GR', 'BU', 'RO'],
+      ['RO', 'BU', 'BU', 'BU', 'RO'],
+      ['RO', 'RO', 'BU', 'FI', 'RO'],
+      
+    ]);
+  this.addCheckingLogic('return this.player.position.x === 3 && this.player.position.y === 4 ? null : "FINISH_NOT_REACHED"');
+winButton:
+  url: ./task4
+  text: Next level
+initialScript: |
+  import raccoon
+
+  #raccoon.go_left()
+  #raccoon.go_up()
+  #raccoon.go_right()
+  #raccoon.go_down()
+  #raccoon.go_left()
+  
+taskDescription: >-
+  To get Raccoon to move in all the 4 directions, let’s study 2 more methods: *raccoon.go_left(n)* to move left and *raccoon.go_up(n)* to move upwards (“n” is the number of steps).
+  At this level Raccoon is separated from the finish by a bush which is not that easy to jump over, so it will have to look around to find the right way. Let’s help it with this task!
+  There are commands already written in the editor and commented on (“#” is placed before each and the programme does not perform it). Remove “#” before each command and pass (if required) the number of steps to the movement methods.

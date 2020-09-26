@@ -1,0 +1,24 @@
+sceneType: Raccoon
+generatingFunc: >-
+  this.setPlayerPosition(0, 2);
+  this.setGameField([
+    ['GR', 'GR', 'GR', 'GR', 'GR'],
+    ['BU', 'BU', 'BU', 'BU', 'BU'],
+    ['RO', 'RO', 'RO', 'RO', 'FI'],
+    ['BU', 'BU', 'BU', 'BU', 'BU'],
+    ['GR', 'GR', 'GR', 'GR', 'GR']
+  ]);
+  this.addCheckingLogic('return this.player.position.x === 4 && this.player.position.y === 2 ? null : "FINISH_NOT_REACHED"');
+winButton:
+  url: ./task2
+  text: Next level
+initialScript: |
+  import raccoon
+  
+  raccoon.go_right(2)
+  
+taskDescription: >- 
+  We invite you to join Raccoon travelling along secret paths. You can find Raccoon’s favourite cookies here that it will never pass by without picking up. There are a lot of monsters nearby as well. Raccoon is afraid of them and is able to hide away. However, sometimes Raccoon becomes exceptionally brave to ruthlessly fight with monsters. Another thing you will get to know is why the paths are called secret, just you wait and see.
+  Meanwhile, let’s have a look at what can be done to get Raccoon to move and, what’s more, to move in different directions.
+  To get Raccoon to move several cells (2, for example) right, use the following method *raccoon.go_right(2)*.
+  Now let’s use this method to help Raccoon to reach the finish. Try and launch the code already existing in the editor. What has happened? How to change the argument (a number in parentheses) to get Raccoon to take the required number of steps?

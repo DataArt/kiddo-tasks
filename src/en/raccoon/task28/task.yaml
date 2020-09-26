@@ -1,0 +1,28 @@
+sceneType: Raccoon
+generatingFunc: >-
+    const random = (Math.floor(Math.random() * (4)) + 1) * 2;
+    const gameField = [ ['RO', 'GR', 'RO', 'GR', 'RO', 'GR', 'RO', 'GR', 'RO'],
+                        ['RO', 'GR', 'RO', 'GR', 'RO', 'GR', 'RO', 'GR', 'RO'],
+                        ['RO', 'GR', 'RO', 'GR', 'RO', 'GR', 'RO', 'GR', 'RO'],
+                        ['RO', 'GR', 'RO', 'GR', 'RO', 'GR', 'RO', 'GR', 'RO'],
+                        ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],
+                        ['RO', 'GR', 'RO', 'GR', 'RO', 'GR', 'RO', 'GR', 'RO'],
+                        ['RO', 'GR', 'RO', 'GR', 'RO', 'GR', 'RO', 'GR', 'RO'],
+                        ['RO', 'GR', 'RO', 'GR', 'RO', 'GR', 'RO', 'GR', 'RO'],
+                        ['RO', 'GR', 'RO', 'GR', 'RO', 'GR', 'RO', 'GR', 'RO']];
+    gameField[8][random] = 'FI';
+    this.setGameField(gameField);
+    this.setPlayerPosition(0, 0);
+    this.addTurrets([0, 8]);
+    this.addMonster([random, 3], 'DOWN');
+    this.addMonster([random, 6], 'DOWN');
+    this.addCheckingLogic('return this.player.position.x === '+ random +' && this.player.position.y === 8 ? null : `FINISH_NOT_REACHED`');
+winButton:
+  url: ./task29
+  text: Next level
+initialScript: |
+  import raccoon
+
+  # Add your code here
+  
+taskDescription: Take Raccoon to the flag. On the player’s way to the flag there can be a monster who can be destroyed with the help of a turret. As the flag and the monster are placed on different paths each time a level is generated, try and find a one-size-fits-all solution.

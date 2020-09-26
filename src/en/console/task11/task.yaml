@@ -1,0 +1,17 @@
+sceneType: console
+winButton:
+  url: ./task12
+  text: Next level
+initialScript: |
+  import console
+
+  # Add your code here
+  
+taskDescription: >-
+  If "a" variable value is less than or equal to "b" variable value, assign "c" variable "a" variable value multiplied by 2, otherwise-"b" variable value multiplied by 2.
+
+generatingFunc: >-
+  this.addConsoleVariable('a', Math.floor(Math.random() * Math.floor(4)) + 1);
+  this.addConsoleVariable('b', Math.floor(Math.random() * Math.floor(6)) + 2);
+  this.addConsoleVariable('c');
+  this.addCheckingLogic(' if (this.getVariableValue("a") <= this.getVariableValue("b") && this.getVariableValue("c") === this.getVariableValue("a") * 2) return null; else if (this.getVariableValue("A") > this.getVariableValue("B") && this.getVariableValue("C") === this.getVariableValue("b") * 2) return null; else return "TASK_DONE_WRONG" ');

@@ -1,0 +1,15 @@
+sceneType: console
+winButton:
+  url: ./task11
+  text: Next level
+initialScript: |
+  import console
+
+  # Add your code here
+  
+taskDescription: 'If "a" variable value is greater than "b" variable value, write "a" variable value in "c" variable, otherwise-"b" variable value.'
+generatingFunc: >-
+  this.addConsoleVariable('a', Math.floor(Math.random() * Math.floor(6)));
+  this.addConsoleVariable('b', Math.floor(Math.random() * Math.floor(6)));
+  this.addConsoleVariable('c');
+  this.addCheckingLogic(' if (this.getVariableValue("a") > this.getVariableValue("b") && this.getVariableValue("c") === this.getVariableValue("a")) return null; else if (this.getVariableValue("a") <= this.getVariableValue("b") && this.getVariableValue("c") === this.getVariableValue("b")) return null; else return "TASK_DONE_WRONG" ');

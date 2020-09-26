@@ -1,0 +1,24 @@
+sceneType: Pandemic
+generatingFunc: >-
+  this.setPlayerPosition(0, 6);
+  this.setGameField([
+      ['RO', 'HO', 'FE', 'CO', 'FE', 'CO', 'CO'],
+      ['RO', 'CO', 'FE', 'RO', 'RO', 'RO', 'RO'],
+      ['RO', 'RO', 'RO', 'RO', 'CO', 'FE', 'FE'],
+      ['FE', 'FE', 'CO', 'RO', 'CO', 'FE', 'CO'],
+      ['CO', 'RO', 'CO', 'RO', 'RO', 'RO', 'RO'],
+      ['FE', 'CO', 'FE', 'CO', 'FE', 'CO', 'RO'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO']
+    ]);
+  this.addVirus([1, 4], 'down');
+  this.addVirus([3, 1], 'right');
+  this.addCheckingLogic('return this.player.position.x === 1 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
+shouldPutOnMask: false
+winButton:
+  url: ./task4
+  text: Next level
+initialScript: |-
+  import player
+
+  # Add your code here
+taskDescription: Дойди до дома и помой руки.

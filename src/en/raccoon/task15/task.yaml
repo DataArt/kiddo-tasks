@@ -1,0 +1,26 @@
+sceneType: Raccoon
+generatingFunc: >-
+  this.setPlayerPosition(3, 0);
+  this.setGameField([
+      ['TR', 'TR', 'TR', 'RO', 'GR', 'GR', 'TR'],
+      ['TR', 'TR', 'ST', 'RO', 'ST', 'GR', 'TR'],
+      ['TR', 'TR', 'RO', 'RO', 'RO', 'GR', 'TR'],
+      ['TR', 'TR', 'GR', 'RO', 'GR', 'TR', 'TR'],
+      ['TR', 'ST', 'RO', 'RO', 'RO', 'TR', 'TR'],
+      ['TR', 'FI', 'RO', 'RO', 'GR', 'GR', 'GR'],
+      ['GR', 'GR', 'TR', 'RO', 'TR', 'TR', 'TR']
+    ]);
+  this.addCookies([4, 4], [2, 5]);
+  this.addMonster([3, 6], 'UP');
+  this.addCustomTile('ST', 'https://i.imgur.com/ZKCX48X.png');
+  this.addCustomTile('TR', 'https://i.imgur.com/ELvTBrD.png');
+  this.addCheckingLogic('return this.player.position.x === 1 && this.player.position.y === 5 ? null : "FINISH_NOT_REACHED"');
+winButton:
+  url: ./task16
+  text: Next level
+initialScript: |
+  import raccoon
+
+  # Add your code here
+  
+taskDescription: Forking paths can help hiding away from the monster and get to the flag collecting all the cookies on the way.

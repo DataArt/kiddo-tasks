@@ -1,0 +1,25 @@
+sceneType: console
+winButton:
+  url: ./task16
+  text: Следующий уровень
+initialScript: |
+  import console
+
+  # Добавь код здесь
+  
+taskDescription: >-
+  Если значение переменной "a" больше значения переменной "b", то присвой переменной "c" остаток от деления переменной "a" на переменную "b". Если полученный остаток больше 0.5, то значение "c" умножь на 2.
+  Если значение переменной "a" меньше или равно значения переменной "b", то присвой переменной "c" остаток от деления значения переменной "b" на значение переменной "a".
+
+generatingFunc: >-
+  this.addConsoleVariable('a', Math.round(Math.random() * 30) / 10 + 1, true);
+  this.addConsoleVariable('b', Math.round(Math.random() * Math.floor(5)) + 1, true);
+  this.addConsoleVariable('c');
+  this.addCheckingLogic(`
+    if (this.getVariableValue("a") > this.getVariableValue("b")) {
+      if (this.getVariableValue("c") > 0.5 && this.getVariableValue("c") === this.getVariableValue("a") % this.getVariableValue("b")
+        || this.getVariableValue("c") <= 0.5 && this.getVariableValue("c") === (this.getVariableValue("a") % this.getVariableValue("b")) * 2 ) return null;
+    } else if (this.getVariableValue("c") === this.getVariableValue("b") % this.getVariableValue("a")) return null;
+    else return "TASK_DONE_WRONG";
+  `);
+

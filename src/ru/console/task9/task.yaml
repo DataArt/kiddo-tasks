@@ -1,0 +1,15 @@
+sceneType: console
+winButton:
+  url: ./task10
+  text: Следующий уровень
+initialScript: |
+  import console
+
+  # Добавь код здесь
+  
+taskDescription: 'Возведи значение переменной "a" в степень числа из переменной "b" и запиши полученное число в переменную "c".'
+generatingFunc: >-
+  this.addConsoleVariable('a', 2);
+  this.addConsoleVariable('b', Math.floor(Math.random() * Math.floor(8)));
+  this.addConsoleVariable('c');
+  this.addCheckingLogic(' return this.getVariableValue("c") === this.getVariableValue("a") ** this.getVariableValue("b") ? null : "TASK_DONE_WRONG" ');

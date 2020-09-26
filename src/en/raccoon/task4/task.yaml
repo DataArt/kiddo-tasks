@@ -1,0 +1,27 @@
+sceneType: Raccoon
+generatingFunc: >-
+  this.setPlayerPosition(3, 3);
+  this.setGameField([
+      ['FI', 'RO', 'RO', 'RO', 'RO', 'RO', 'FI'],
+      ['RO', 'BU', 'BU', 'RO', 'GR', 'GR', 'RO'],
+      ['RO', 'BU', 'BU', 'RO', 'GR', 'GR', 'RO'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],
+      ['RO', 'GR', 'GR', 'RO', 'BU', 'BU', 'RO'],
+      ['RO', 'GR', 'GR', 'RO', 'BU', 'BU', 'RO'],
+      ['FI', 'RO', 'RO', 'RO', 'RO', 'RO', 'FI'],
+    ]);
+  this.addCheckingLogic('return (this.player.position.x === 0 && this.player.position.y === 0)  || (this.player.position.x === 6 && this.player.position.y === 0)  || (this.player.position.x === 0 && this.player.position.y === 6)  || (this.player.position.x === 6 && this.player.position.y === 6) ? null : "FINISH_NOT_REACHED"');
+winButton:
+  url: ./task5
+  text: Next level
+initialScript: |
+  import raccoon
+
+  # methods: 
+  #raccoon.go_right()
+  #raccoon.go_left()
+  #raccoon.go_down()
+  #raccoon.go_up()
+  
+taskDescription: >-
+  Now let’s practice moving Raccoon in different directions using the learnt commands (methods). At this level there is a range of right solutions, which is often a case in real life. Thus, Raccoon will have to reach any flag to succeed.

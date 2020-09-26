@@ -1,0 +1,31 @@
+sceneType: Raccoon
+generatingFunc: >-
+  this.setPlayerPosition(0, 0);
+  this.setGameField([
+      ['RO', 'RO', 'TR', 'TR', 'RO', 'TR', 'GR', 'TR', 'TR'],
+      ['TR', 'RO', 'TR', 'ST', 'RO', 'ST', 'GR', 'TR', 'TR'],
+      ['TR', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'TR'],
+      ['TR', 'RO', 'TR', 'GR', 'RO', 'GR', 'TR', 'TR', 'TR'],
+      ['TR', 'RO', 'ST', 'RO', 'RO', 'RO', 'RO', 'TR', 'TR'],
+      ['TR', 'RO', 'RO', 'RO', 'RO', 'BU', 'RO', 'RO', 'TR'],
+      ['TR', 'RO', 'GR', 'TR', 'RO', 'BU', 'RO', 'RO', 'TR'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'FI'],
+      ['TR', 'RO', 'RO', 'RO', 'RO', 'BU', 'RO', 'RO', 'TR']
+    ]);
+  this.addCookies([1, 7], [4, 4], [4, 8], [7, 5]);
+  this.addMonster([4, 0], 'DOWN');
+  this.addMonster([1, 2], 'RIGHT');
+  this.addMonster([0, 7], 'RIGHT');
+  this.addMonster([8, 7], 'LEFT');
+  this.addCustomTile('ST', 'https://i.imgur.com/ZKCX48X.png');
+  this.addCustomTile('TR', 'https://i.imgur.com/ELvTBrD.png');
+  this.addCheckingLogic('return this.player.position.x === 8 && this.player.position.y === 7 ? null : "FINISH_NOT_REACHED"');
+winButton:
+  url: ./task19
+  text: Next level
+initialScript: |
+  import raccoon
+
+  # Add your code here
+  
+taskDescription: 'Escape from the monsters, pick up all the cookies and take Raccoon to the flag!'

@@ -1,0 +1,13 @@
+sceneType: console
+generatingFunc: >-
+  this.addConsoleVariable('x', 10);
+  this.addCheckingLogic('return this.consoleContent.includes("10") && this.getVariableValue("x") === 10 ? null : "TASK_DONE_WRONG"');
+winButton:
+  url: ./task2
+  text: Следующий уровень
+initialScript: |
+  import console
+
+  # Добавь код здесь
+  
+taskDescription: Выведи значение переменной "x" в консоль.

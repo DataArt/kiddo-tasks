@@ -1,0 +1,25 @@
+sceneType: console
+winButton:
+  url: ./task21
+  text: Next level
+initialScript: |
+  import console
+
+  # Add your code here
+  
+taskDescription: >-
+  Until "n" variable value is greater than 1, add 5 to "z" variable value and subtract 2 from "n". Display "z" variable value on the console.
+
+generatingFunc: >-
+  this.addConsoleVariable('n', Math.round(Math.random() * Math.floor(5)) + 2, true);
+  this.addConsoleVariable('z');
+  this.addCheckingLogic(`
+    if (this.consoleContent.includes(this.getVariableValue("z").toString())) {
+        return null;
+    } else {
+        return "TASK_DONE_WRONG";
+    }
+  `)
+
+
+

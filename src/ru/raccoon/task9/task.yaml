@@ -1,0 +1,23 @@
+sceneType: Raccoon
+generatingFunc: >-
+  this.setPlayerPosition(2, 4);
+  this.setGameField([
+      ['BU', 'BU', 'BU', 'GR', 'GR', 'BU', 'GR'],
+      ['BU', 'GR', 'GR', 'RO', 'RO', 'RO', 'FI'],
+      ['BU', 'BU', 'RO', 'RO', 'GR', 'GR', 'RO'],
+      ['GR', 'GR', 'RO', 'RO', 'RO', 'RO', 'RO'],
+      ['BU', 'GR', 'RO', 'GR', 'OF', 'OF', 'BU'],
+      ['BU', 'GR', 'GR', 'GR', 'OF', 'GR', 'GR'],
+      ['BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'BU']
+    ]);
+  this.addCookies([5, 3], [5, 1]);
+  this.addCheckingLogic('return this.player.position.x === 6 && this.player.position.y === 1 ? null : "FINISH_NOT_REACHED"');
+winButton:
+  url: ./task10
+  text: Следующий уровень
+initialScript: |
+  import raccoon
+
+  # Добавь код здесь
+  
+taskDescription: 'На этой дорожке лежит любимое лакомство Енота. Помоги ему дойти до флага, собрав при этом все печеньки! Иначе Енот расстроится!'

@@ -1,0 +1,34 @@
+sceneType: Raccoon
+generatingFunc: >-
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    const gameField = [ 
+                        ['GR', 'BU', 'BU', 'BU', 'GR', 'BU', 'BU', 'BU', 'GR'],
+                        ['GR', 'BU', 'RO', 'BU', 'GR', 'BU', 'RO', 'BU', 'GR'],
+                        ['GR', 'BU', 'RO', 'BU', 'GR', 'BU', 'RO', 'BU', 'GR'],
+                        ['GR', 'BU', 'RO', 'BU', 'GR', 'BU', 'RO', 'BU', 'GR'],
+                        ['GR', 'BU', 'RO', 'BU', 'GR', 'BU', 'RO', 'BU', 'GR'],
+                        ['GR', 'BU', 'RO', 'BU', 'GR', 'BU', 'RO', 'BU', 'GR'],
+                        ['GR', 'BU', 'RO', 'BU', 'GR', 'BU', 'RO', 'BU', 'GR'],
+                        ['GR', 'BU', 'RO', 'BU', 'GR', 'BU', 'FI', 'BU', 'GR'],
+                        ['GR', 'BU', 'BU', 'BU', 'GR', 'BU', 'BU', 'BU', 'GR']
+                        ];
+    const horizontalRoad = ['RO', 'RO', 'RO'];
+    const random = getRandomInt(2, 6);
+    console.log(random);
+    gameField[random].splice(3, 3, ...horizontalRoad);
+    this.setGameField(gameField);
+    this.setPlayerPosition(2, 1);
+    this.addCheckingLogic('return this.player.position.x === 6 && this.player.position.y === 7 ? null : `FINISH_NOT_REACHED`');
+winButton:
+  url: ./task24
+  text: Next level
+initialScript: |
+  import raccoon
+
+  # Add your code here
+  
+taskDescription: Take Raccoon to the flag. Pay attention, that the horizontal path-bridge in the middle changes its position each time a level is generated. Therefore, you should try and create a one-size-fits-all solution.
