@@ -3,6 +3,7 @@
   "description": "CONSOLE_DESCRIPTION",
   "imageUrl": "/assets/images/console.svg",
   "tasks": [
+    "task0",
     "task1",
     "task2",
     "task3",
