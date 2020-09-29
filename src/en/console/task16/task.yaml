@@ -8,9 +8,9 @@ initialScript: |
   # Add your code here
   
 taskDescription: >-
-  If "a" variable value is equal to 1, assign "c" variable the sum of "a" and "b" variables.
-  If "a" variable value is equal to 1, assign "c" variable the difference of "a" and "b" variables.
-  If "a" variable value is equal to 0, assign "c" variable value of 0.
+  If "a" value is equal to 1, assign "c" the sum of "a" and "b" values.
+  If "a" value is equal to 1, assign "c" the difference of "a" and "b" values.
+  If "a" value is equal to 0, assign "c" a value of 0.
 
 generatingFunc: >-
   this.addConsoleVariable('a', Math.round(Math.random() * Math.floor(2)), true);

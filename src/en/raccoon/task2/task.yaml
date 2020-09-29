@@ -21,6 +21,6 @@ initialScript: |
   # Add your code here
   
 taskDescription: >-
-  Raccoon can’t only move right but in any other directions as well. Downward, for example. It has the method *raccoon.go_down(n)*, where “n” is the number of steps, for that.
+  Raccoon can move not only right but in any other directions as well. Downward, for example. It has the method *raccoon.go_down(n)*, where “n” is the number of steps, for that.
   If it is necessary to take one step only, you do not need to specify that. You can just write*raccoon.go_down()*.That’s true for other movement methods as well, for example *raccoon.go_right()* and you get Raccoon move one cell right.
   Now let’s help Raccoon to get to the finish following this maze-like path! We have already written the first movement command for you. All the others should be written with a new line each.

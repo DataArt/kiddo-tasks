@@ -7,7 +7,7 @@ initialScript: |
 
   # Add your code here
   
-taskDescription: 'If "b" variable value is not equal to 0, assign "c" variable the quotient of "a" and "b", otherwise-"a" variable value.'
+taskDescription: If "b" value is not equal to 0, write the quotient of "a" and "b" values into "c", otherwise — write "a" value.
 generatingFunc: >-
   this.addConsoleVariable('a', Math.round(Math.random() * 100) / 100);
   this.addConsoleVariable('b', Math.round(Math.random() * Math.floor(2)));

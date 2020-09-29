@@ -8,10 +8,12 @@ initialScript: |
   # Add your code here
   
 taskDescription: >-
-  If "a" variable value multiplied by 2 is greater than "b", assign "c" variable the value of the sum of "a" an "b" variables. If "c" variable value is greater than 10, assign "d" variable the value of "c" variable divided by 2. If "c" variable value is less than 10 but greater than 5, assign "d" variable the value of "c" variable multiplied by 2.
-  If "c" variable value is less than 5, assign "d" variable the value of 5.
-  If "a" variable value multiplied by 2 is equal to "b", assign "d" variable the squared value of "a" variable.
-  If "a" variable value multiplied by 2 is less than "be" variable, assign "d" variable the value of "b" variable to the 3rd power.  
+  If "a" value multiplied by 2 is greater than "b" value, assign "c" the value of the sum of "a" and "b".
+  If "c" value is greater than 10, assign "d" the value of "c" divided by 2.
+  If "c" value is less than 10 but greater than 5, assign "d" the value of "c" multiplied by 2.
+  If "c" value is less than 5, assign "d" a value of 5.
+  If "a" value multiplied by 2 is equal to "b", assign "d" the squared value of "a".
+  If "a" value multiplied by 2 is less than "b" assign "d" the value of "b" to the 3rd power.
 
 generatingFunc: >-
   this.addConsoleVariable('a', Math.round(Math.random() * Math.floor(4)), true);

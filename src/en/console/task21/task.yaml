@@ -8,7 +8,7 @@ initialScript: |
   # Add your code here
   
 taskDescription: >-
-  Display the word "Python" on the console "n" times without moving to new line.
+  Display the word "Python" on the console "n" times without moving to a new line.
 
 generatingFunc: >-
   this.addConsoleVariable('n', Math.round(Math.random() * Math.floor(5)) + 2, true);

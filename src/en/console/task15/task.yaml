@@ -8,8 +8,8 @@ initialScript: |
   # Add your code here
   
 taskDescription: >-
-  If "a" variable value is greater than "b" variable value, assign "c" variable the remainder of division of "a" variable by "b" variable. If the remainder is less than 0.5, multiply "c" variable by 2.
-  If "a" variable value is less than or equal to "b" variable value, assign "c" variable the remainder of division of "b" variable value by "a" variable value.
+  If "a" value is greater than "b" value, assign "c" the remainder of division of "a" by "b". If the remainder is less than 0.5, multiply "c" by 2. 
+  If "a" value is less than or equal to "b" value, assign "c" the remainder of division of "b" by "a".
 
 generatingFunc: >-
   this.addConsoleVariable('a', Math.round(Math.random() * 30) / 10 + 1, true);

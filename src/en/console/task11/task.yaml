@@ -8,7 +8,7 @@ initialScript: |
   # Add your code here
   
 taskDescription: >-
-  If "a" variable value is less than or equal to "b" variable value, assign "c" variable "a" variable value multiplied by 2, otherwise-"b" variable value multiplied by 2.
+  If "a" value is less than or equal to "b" value, write "a" value multiplied by 2 into "c", otherwise — "b" value multiplied by 2
 
 generatingFunc: >-
   this.addConsoleVariable('a', Math.floor(Math.random() * Math.floor(4)) + 1);

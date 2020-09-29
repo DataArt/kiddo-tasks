@@ -30,4 +30,4 @@ initialScript: |
 
   # Add your code here
   
-taskDescription: There is a locked door on the way to the flag. To get through it and to the flag Raccoon must get a key. Pay attention, that the door changes its position each time a level is generated. Try and find a one-size-fits-all solution.
+taskDescription: There is a locked door on the way to the flag. To get through it and to the flag Raccoon must get a key. Note that the door changes its position each time a level is generated. Try and find a one-size-fits-all solution.

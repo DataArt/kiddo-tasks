@@ -7,7 +7,7 @@ initialScript: |
 
   # Add your code here
   
-taskDescription: 'Calculate "b" variable value power of "a" variable value and write the result in "c" variable.'
+taskDescription: Calculate "a" value to the power of "b" value and write the result into "c".
 generatingFunc: >-
   this.addConsoleVariable('a', 2);
   this.addConsoleVariable('b', Math.floor(Math.random() * Math.floor(8)));
