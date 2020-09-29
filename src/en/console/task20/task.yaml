@@ -8,7 +8,7 @@ initialScript: |
   # Add your code here
   
 taskDescription: >-
-  Until "n" variable value is greater than 1, add 5 to "z" variable value and subtract 2 from "n". Display "z" variable value on the console.
+  Until "n" value is greater than 1, add 5 to "z" value and subtract 2 from "n". Display "z" value on the console.
 
 generatingFunc: >-
   this.addConsoleVariable('n', Math.round(Math.random() * Math.floor(5)) + 2, true);

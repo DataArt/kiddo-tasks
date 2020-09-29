@@ -7,7 +7,7 @@ initialScript: |
 
   # Add your code here
   
-taskDescription: 'If "a" variable value is greater than "b" variable value, write "a" variable value in "c" variable, otherwise-"b" variable value.'
+taskDescription: If "a" value is greater than "b" value, write "a" value into "c", otherwise — "b" value.
 generatingFunc: >-
   this.addConsoleVariable('a', Math.floor(Math.random() * Math.floor(6)));
   this.addConsoleVariable('b', Math.floor(Math.random() * Math.floor(6)));

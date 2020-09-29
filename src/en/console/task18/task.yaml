@@ -8,9 +8,9 @@ initialScript: |
   # Add your code here
   
 taskDescription: >-
-  If "a" variable value is greater than 5 and even, assign "c" variable the value of "a" variable divided by 2.
-  If "a" variable value is less than or equal to 5 or equal to "b" variable value, assign "c" variable the value of "b" variable.
-  Otherwise, assign "c" variable the value of 0 variable.
+  If "a" value is greater than 5 and even, assign "c" the value of "a" divided by 2.
+  If "a" value is either less than or equal to 5 or equal to "b" value, assign "c" variable the value of "b".
+  Otherwise, assign "c" a value of 0.
 
 generatingFunc: >-
   this.addConsoleVariable('a', Math.round(Math.random() * Math.floor(10)), true);

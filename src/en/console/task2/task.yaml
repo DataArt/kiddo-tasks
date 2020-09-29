@@ -11,4 +11,4 @@ initialScript: |
 
   # Add your code here
   
-taskDescription: Display the sum of "a" and "b" variables values on the console.
+taskDescription: Display the sum of "a" and "b" values on the console.

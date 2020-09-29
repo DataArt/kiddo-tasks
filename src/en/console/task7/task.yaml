@@ -7,7 +7,7 @@ initialScript: |
 
   # Add your code here
   
-taskDescription: 'Divide "a" variable value by "b" variable value and write the remainder of division in "c" variable.'
+taskDescription: Divide "a" value by "b" value and write the remainder of the division into "c".
 generatingFunc: >-
   this.addConsoleVariable('a', Math.floor(Math.random() * Math.floor(8)));
   this.addConsoleVariable('b', Math.floor(Math.random() * Math.floor(6)));

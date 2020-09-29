@@ -7,7 +7,7 @@ initialScript: |
 
   # Add your code here
   
-taskDescription: 'Multiply a" and "b" variables values and write the product in "c" variable.'
+taskDescription: Multiply "a" and "b" values and write the product into "c".
 generatingFunc: >-
   this.addConsoleVariable('a', Math.floor(Math.random() * Math.floor(11)));
   this.addConsoleVariable('b', Math.floor(Math.random() * Math.floor(6)));
