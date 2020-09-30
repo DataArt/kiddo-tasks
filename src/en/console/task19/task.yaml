@@ -8,7 +8,7 @@ initialScript: |
   # Add your code here
   
 taskDescription: >-
-  Add "n" times the sum of "x" and "y" values multiplied by 2 and write the result in "z". Display "z" value on the console.
+  Add "n" times the sum of "x" and "y" values multiplied by 2 and write the result into "z". Display "z" value on the console.
 
 generatingFunc: >-
   this.addConsoleVariable('x', Math.round(Math.random() * Math.floor(10)), true);
