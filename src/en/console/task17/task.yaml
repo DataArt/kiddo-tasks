@@ -13,7 +13,7 @@ taskDescription: >-
   If "c" value is less than 10 but greater than 5, assign "d" the value of "c" multiplied by 2.
   If "c" value is less than 5, assign "d" a value of 5.
   If "a" value multiplied by 2 is equal to "b", assign "d" the squared value of "a".
-  If "a" value multiplied by 2 is less than "b" assign "d" the value of "b" to the 3rd power.
+  If "a" value multiplied by 2 is less than "b", assign "d" the value of "b" to the 3rd power.
 
 generatingFunc: >-
   this.addConsoleVariable('a', Math.round(Math.random() * Math.floor(4)), true);

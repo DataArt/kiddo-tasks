@@ -7,7 +7,7 @@ initialScript: |
 
   # Add your code here
   
-taskDescription: If "b" value multiplied by 2 is less than or equal to "a" value, write the sum of "a" and "b" values into "c", otherwise—their product.
+taskDescription: If "b" value multiplied by 2 is less than or equal to "a" value, write the sum of "a" and "b" values into "c", otherwise — their product.
 generatingFunc: >-
   this.addConsoleVariable('a', Math.floor(Math.random() * Math.floor(10)));
   this.addConsoleVariable('b', Math.floor(Math.random() * Math.floor(5)));
