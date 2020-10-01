@@ -28,4 +28,4 @@ initialScript: |
 
   # Add your code here
   
-taskDescription: Take Raccoon to the flag. Pay attention, that 2 vertical paths-bridges in the middle change their position each time a level is generated. Therefore, you should try and create a one-size-fits-all solution.
+taskDescription: Take Raccoon to the flag. Note that 2 vertical paths-bridges in the middle change their position each time a level is generated. Therefore, you should try and create a one-size-fits-all solution.

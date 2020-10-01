@@ -1,0 +1,13 @@
+sceneType: console
+generatingFunc: >-
+  this.addCheckingLogic('return this.consoleContent.includes("5") ? null : "TASK_DONE_WRONG"');
+winButton:
+  url: ./task1
+  text: Теперь попробуем что-нибудь посложнее
+initialScript: |
+  import console
+
+  # Добавь код здесь
+  
+taskDescription: >-
+  Выведи в консоль командой `print` число 5.

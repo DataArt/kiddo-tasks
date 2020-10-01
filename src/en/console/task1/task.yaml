@@ -10,4 +10,4 @@ initialScript: |
 
   # Add your code here
   
-taskDescription: Display "x" variable value on the console.
+taskDescription: Display the value of "x" on the console.

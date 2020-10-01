@@ -8,8 +8,8 @@ initialScript: |
   # Add your code here
   
 taskDescription: >-
-  Perform "n" iterations, taking each even step of which add 3 to "c" variable while taking each odd step multiply "c" variable by 2.
-  Afterwards, display "c" variable value on the console.
+  Perform "n" iterations: at each even step add 3 to "c" value and at each odd step multiply "c" value by 2.
+  Afterwards, display "c" value on the console.
 
 
 generatingFunc: >-

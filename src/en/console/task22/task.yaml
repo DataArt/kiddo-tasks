@@ -8,7 +8,7 @@ initialScript: |
   # Add your code here
   
 taskDescription: >-
-  Display line from "c" variable on console "n" times.
+  Display the line from "c" variable on the console "n" times.
 
 generatingFunc: >-
   this.addConsoleVariable('c', ['cat', 'dog'][Math.round(Math.random())], true);
