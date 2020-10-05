@@ -1,0 +1,11 @@
+{
+  "sceneType": "Pandemic",
+  "generatingFunc": "this.setPlayerPosition(5, 5); this.setGameField([ ['HO', 'CO', 'FE', 'RO', 'CO', 'FE', 'RO'], ['RO', 'RO', 'RO', 'RO', 'RO', 'CO', 'RO'], ['RO', 'RO', 'RO', 'RO', 'RO', 'FE', 'RO'], ['RO', 'RO', 'RO', 'RO', 'RO', 'CO', 'RO'], ['RO', 'RO', 'RO', 'RO', 'RO', 'CO', 'FE'], ['CO', 'RO', 'RO', 'RO', 'RO', 'RO', 'FE'], ['FE', 'FE', 'FE', 'RO', 'FE', 'FE', 'FE'] ]); this.addVirus([6, 3], 'up'); this.addPerson([0, 2], 'right'); this.addPerson([3, 3], 'up');",
+  "shouldPutOnMask": true,
+  "winButton": {
+    "url": "../task8",
+    "text": "Next level"
+  },
+  "initialScript": "import player\n\n# Add your code here",
+  "taskDescription": "Надень маску, дойди до дома, держа дистанцию в одну клетку от людей, и помой руки."
+}

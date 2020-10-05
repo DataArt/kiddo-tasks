@@ -20,5 +20,5 @@ winButton:
 initialScript: |-
   import player
 
-  # Добавь код здесь
-taskDescription: Дойди до дома и помой руки.
+  # Add your code here
+taskDescription: '(TODO: translate) Дойди до дома и помой руки.'
