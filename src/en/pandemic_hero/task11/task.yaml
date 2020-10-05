@@ -18,5 +18,5 @@ generatingFunc: >-
 initialScript: |-
   import player
 
-  # Добавь код здесь
-taskDescription: 'Надень маску, дойди до дома, уворачиваясь от вирусов, и помой руки.'
+  # Add your code here
+taskDescription: '(TODO: translate) Надень маску, дойди до дома, уворачиваясь от вирусов, и помой руки.'

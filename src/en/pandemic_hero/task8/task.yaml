@@ -22,7 +22,7 @@ winButton:
 initialScript: |-
   import player
 
-  # Добавь код здесь
+  # Add your code here
 taskDescription: >-
-  Надень маску, дойди до дома, держа дистанцию в одну клетку от людей, и помой
+  (TODO: translate) Надень маску, дойди до дома, держа дистанцию в одну клетку от людей, и помой
   руки.
