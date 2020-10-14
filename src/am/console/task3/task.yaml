@@ -1,0 +1,16 @@
+sceneType: console
+winButton:
+  url: ./task4
+  text: Next level
+initialScript: |
+  import console
+
+  # Ավելացրեք կոդ այստեղ
+  
+taskDescription: 'Գրիր «a» և «b» փոփոխականների արժեքների հանրագումարը «c» փոփոխականի մեջ:'
+generatingFunc: >-
+  this.addConsoleVariable('a', Math.floor(Math.random() * Math.floor(6)));
+  this.addConsoleVariable('b', Math.floor(Math.random() * Math.floor(6)));
+  this.addConsoleVariable('c');
+  this.addCheckingLogic('return this.getVariableValue("c") === this.getVariableValue("a") + this.getVariableValue("b") ? null : "TASK_DONE_WRONG" ');
+

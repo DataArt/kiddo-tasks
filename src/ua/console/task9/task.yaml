@@ -1,0 +1,15 @@
+sceneType: console
+winButton:
+  url: ./task10
+  text: Next level
+initialScript: |
+  import console
+
+  # Додати код тут
+  
+taskDescription: Зведи значення змінної "a" у ступінь числа зі змінної "b" та запиши отримане число у змінну "c".
+generatingFunc: >-
+  this.addConsoleVariable('a', 2);
+  this.addConsoleVariable('b', Math.floor(Math.random() * Math.floor(8)));
+  this.addConsoleVariable('c');
+  this.addCheckingLogic(' return this.getVariableValue("c") === this.getVariableValue("a") ** this.getVariableValue("b") ? null : "TASK_DONE_WRONG" ');

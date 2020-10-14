@@ -1,0 +1,21 @@
+sceneType: console
+winButton:
+  url: ./task22
+  text: Next level
+initialScript: |
+  import console
+
+  # Ավելացրեք կոդ այստեղ
+  
+taskDescription: >-
+  Կոնսոլի վրա տպիր «Python» բառը «n» անգամ առանց տողադարձի:
+
+generatingFunc: >-
+  this.addConsoleVariable('n', Math.round(Math.random() * Math.floor(5)) + 2, true);
+  this.addCheckingLogic(`
+    if (this.consoleContent.includes('Python'.repeat(this.getVariableValue('n')))) {
+      return null;
+    } else {
+      return "TASK_DONE_WRONG";
+    }
+  `)

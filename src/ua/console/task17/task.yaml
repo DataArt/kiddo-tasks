@@ -1,0 +1,36 @@
+sceneType: console
+winButton:
+  url: ./task18
+  text: Next level
+initialScript: |
+  import console
+
+  # Додати код тут
+  
+taskDescription: >-
+  Якщо значення змінної "a", помноженої на 2, більше "b", то привласни змінній "c"  суму змінних "a" і "b".
+  Якщо значення "c" стане більше 10, то привласни змінній "d" значення "c", поділене на 2.
+  Якщо значення "c" менше 10, але більше 5, то привласни змінній "d" значення "c", помножене на 2.
+  Якщо значення "c" менше 5, то привласни змінній "d" значення 5.
+  Якщо значення змінної "a", помноженої на 2, дорівнює "b", то привласни змінній "d" значення змінної "a" у 2-му ступені.
+  Якщо значення змінної "a", помноженої на 2, менше "b", то привласни змінній "d" значення змінної "b" у 3-му ступені.
+
+
+generatingFunc: >-
+  this.addConsoleVariable('a', Math.round(Math.random() * Math.floor(4)), true);
+  this.addConsoleVariable('b', Math.round(Math.random() * Math.floor(7)), true);
+  this.addConsoleVariable('c');
+  this.addConsoleVariable('d');
+
+  this.addCheckingLogic(`
+    if (this.getVariableValue("a") * 2 > this.getVariableValue("b")) {
+      if (this.getVariableValue("c") > 10 && this.getVariableValue("d") === this.getVariableValue("c") / 2) return null;
+      else if (this.getVariableValue("c") > 5 && this.getVariableValue("d") === this.getVariableValue("c") * 2) return null;
+      else if (this.getVariableValue("c") <= 5 && this.getVariableValue("d") === 5) return null;
+      else return "TASK_DONE_WRONG";
+    }
+    else if (this.getVariableValue("a") * 2 === this.getVariableValue("b") && this.getVariableValue("d") === this.getVariableValue("a") ** 2) return null;
+    else if (this.getVariableValue("a") * 2 < this.getVariableValue("b") && this.getVariableValue("d") === this.getVariableValue("b") ** 3) return null;
+    else return "TASK_DONE_WRONG"
+  `);
+

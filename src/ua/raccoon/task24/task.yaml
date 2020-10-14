@@ -1,0 +1,31 @@
+sceneType: Raccoon
+generatingFunc: >-
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    const gameField = [ ['RO', 'GR', 'GR', 'GR', 'RO', 'GR', 'GR', 'GR', 'RO'], ['RO', 'GR', 'GR', 'GR', 'RO', 'GR', 'GR', 'GR', 'RO'], ['RO', 'GR', 'GR', 'GR', 'RO', 'GR', 'GR', 'GR', 'RO'], ['RO', 'GR', 'GR', 'GR', 'RO', 'GR', 'GR', 'GR', 'RO'], ['RO', 'GR', 'GR', 'GR', 'RO', 'GR', 'GR', 'GR', 'RO'], ['RO', 'GR', 'GR', 'GR', 'RO', 'GR', 'GR', 'GR', 'RO'], ['RO', 'GR', 'GR', 'GR', 'RO', 'GR', 'GR', 'GR', 'RO'], ['RO', 'GR', 'GR', 'GR', 'RO', 'GR', 'GR', 'GR', 'RO'], ['RO', 'GR', 'GR', 'GR', 'RO', 'GR', 'GR', 'GR', 'FI'],];
+    const horizontalRoad = ['RO', 'RO', 'RO'];
+    const random1 = getRandomInt(2, 6);
+    const random2 = getRandomInt(2, 6);
+    gameField[random1].splice(1, 3, ...horizontalRoad);
+    gameField[random2].splice(5, 3, ...horizontalRoad);
+    let gameFieldTurn = [[],[],[],[],[],[],[],[],[]];
+    for (let i = 0; i < gameField.length; i++) {
+        for (let j = 0; j < gameField.length; j++) {
+            gameFieldTurn[j][i] = gameField[i][j];
+        }				  
+    }
+    this.setGameField(gameFieldTurn);
+    this.setPlayerPosition(0, 0);
+    this.addCheckingLogic('return this.player.position.x === 8 && this.player.position.y === 8 ? null : `FINISH_NOT_REACHED`');
+winButton:
+  url: ./task25
+  text: Next level
+initialScript: |
+  import raccoon
+
+  # Додати код тут
+  
+taskDescription: Доведи Єнота до прапора. Зверни увагу, що 2 вертикальні доріжки-містки посередині змінюють своє положення щоразу при генерації рівня. Тому постарайся написати універсальне рішення для будь-якого випадку.

@@ -1,0 +1,31 @@
+sceneType: console
+winButton:
+  url: ./task19
+  text: Next level
+initialScript: |
+  import console
+
+  # Додати код тут
+  
+taskDescription: >-
+  Якщо значення "a" більше 5 і є парним, то привласни змінній "c" значення "a", поділене на 2.
+  Якщо значення "a" менше або дорівнює 5 або дорівнює значенню "b", то привласни змінній "c" значення змінної "b".
+  Інакше привласни змінній "c" значення змінної 0.
+
+generatingFunc: >-
+  this.addConsoleVariable('a', Math.round(Math.random() * Math.floor(10)), true);
+  this.addConsoleVariable('b', Math.round(Math.random() * Math.floor(10)), true);
+  this.addConsoleVariable('c');
+
+  this.addCheckingLogic(`
+    if (this.getVariableValue("a") > 5 && this.getVariableValue("a") % 2 === 0 && this.getVariableValue("c") === this.getVariableValue("a") / 2)  {
+      return null;
+    }
+    else if (this.getVariableValue("a") <=5 || this.getVariableValue("a") === this.getVariableValue("b") && this.getVariableValue("c") === this.getVariableValue("b")) {
+      return null;
+    }
+    else if (this.getVariableValue("c") === 0) return null;
+    else return "TASK_DONE_WRONG";
+  `);
+
+

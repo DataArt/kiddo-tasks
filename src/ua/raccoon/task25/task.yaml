@@ -1,0 +1,17 @@
+sceneType: Raccoon
+generatingFunc: >-
+    const gameField = [ ['RO', 'RO', 'GR', 'GR', 'GR', 'FI'], ['GR', 'RO', 'RO', 'GR', 'GR', 'RO'], ['GR', 'GR', 'RO', 'RO', 'GR', 'RO'], ['GR', 'GR', 'GR', 'RO', 'GR', 'RO'], ['GR', 'GR', 'GR', 'RO', 'RO', 'RO'], ['GR', 'GR', 'GR', 'GR', 'GR', 'RO']];
+    this.setGameField(gameField);
+    this.setPlayerPosition(0, 0);
+    this.addMines([2, 1]);
+    this.addMonster([5, 1], 'DOWN');
+    this.addCheckingLogic('return this.player.position.x === 5 && this.player.position.y === 0 ? null : `FINISH_NOT_REACHED`');
+winButton:
+  url: ./task26
+  text: Next level
+initialScript: |
+  import raccoon
+
+  # Додати код тут
+  
+taskDescription: На шляху до фінішу патрулює монстр, і здається, що його ніяк не оминути... Але спробуй знешкодити його за допомогою бомби! Підбери її, встанови на шляху проходження монстра (*raccoon.set_mine()*), і не забудь відбігти хоча б на одну клітинку. Почекай (*raccoon.wait(кількість ходів)*), поки монстр на неї наступить. БА-БАХ! А потім дійди до фінішу.

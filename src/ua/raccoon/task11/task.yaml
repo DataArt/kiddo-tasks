@@ -24,6 +24,6 @@ winButton:
 initialScript: |
   import raccoon
 
-  # Add your code here
+  # Додати код тут
   
-taskDescription: Well, writing the code to take Raccoon to the flag could be really exhausting. Can’t be there anything of a help? Sure thing! The sequence of commands has been carried out in a strict top down order so far. Now you need the programme to take a decision and to perform various actions depending on the situation. You can manage it with the help of the operator “while”. You can learn more details about it <a href="https://pythonworld.ru/osnovy/cikly-for-i-while-operatory-break-i-continue-volshebnoe-slovo-else.html" target="_blank" rel="nofollow" class="i18n-link">here</a>
+taskDescription: Отакої! Тут втомишся писати код, щоб довести Єнота до прапора. Невже не знайдеться чогось на допомогу? Звісно! Раніше послідовність команд завжди виконувалася по порядку суворо згори донизу. А тепер треба, щоб програма ухвалювала рішення і виконувала різні дії залежно від ситуації. Цього можна досягти за допомогою оператора while. Детальніше про нього можна прочитати <a href="https://pythonworld.ru/osnovy/cikly-for-i-while-operatory-break-i-continue-volshebnoe-slovo-else.html" target="_blank" rel="nofollow" class="i18n-link">тут</a>.

@@ -1,0 +1,10 @@
+{
+  "sceneType": "console",
+  "generatingFunc": "this.addConsoleVariable('A', 5); this.addConsoleVariable('B', 12); this.addCheckingLogic('return this.consoleWindowContent === 17');",
+  "winButton": {
+    "url": "../task3",
+    "text": "Next level"
+  },
+  "initialScript": "import console\n\n# Add your code here",
+  "taskDescription": "Выведи сумму переменных A и B на консоль."
+}

@@ -1,0 +1,14 @@
+sceneType: console
+generatingFunc: >-
+  this.addConsoleVariable('a', 5);
+  this.addConsoleVariable('b', 12);
+  this.addCheckingLogic('return this.consoleContent.includes("17") ? null : "TASK_DONE_WRONG"');
+winButton:
+  url: ./task3
+  text: Next level
+initialScript: |
+  import console
+
+  # Ավելացրեք կոդ այստեղ
+  
+taskDescription: 'Տպիր «a» և «b» փոփոխականների արժեքների հանրագումարը կոնսոլի վրա:'

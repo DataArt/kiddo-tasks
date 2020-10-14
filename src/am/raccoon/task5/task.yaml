@@ -1,0 +1,28 @@
+sceneType: Raccoon
+generatingFunc: >-
+  this.setPlayerPosition(3, 0);
+  this.setGameField([
+      ['FI', 'BU', 'BU', 'RO', 'BU', 'BU', 'FI'],
+      ['BU', 'BU', 'BU', 'RO', 'BU', 'BU', 'BU'],
+      ['GR', 'GR', 'BU', 'RO', 'BU', 'GR', 'GR'],
+      ['GR', 'GR', 'BU', 'RO', 'BU', 'GR', 'GR'],
+      ['GR', 'GR', 'BU', 'RO', 'BU', 'GR', 'GR'],
+      ['BU', 'BU', 'BU', 'RO', 'BU', 'BU', 'BU'],
+      ['FI', 'BU', 'BU', 'RO', 'RO', 'RO', 'FI'],
+      
+    ]);
+  this.addCheckingLogic('return this.player.position.x === 6 && this.player.position.y === 6 ? null : "FINISH_NOT_REACHED"');
+winButton:
+  url: ./task6
+  text: Next level
+initialScript: |
+  import raccoon
+
+  #methods: 
+  #raccoon.go_right()
+  #raccoon.go_left()
+  #raccoon.go_down()
+  #raccoon.go_up()
+  
+taskDescription: >-
+  Այստեղ որոշ դրոշներ հասանելի չեն խիտ թփուտների պատճառով, ուստի Ջրարջին պետք է օգնել ՝ հասնել բաց տարածքին։ 
