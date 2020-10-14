@@ -1,0 +1,25 @@
+sceneType: Pandemic
+generatingFunc: >-
+  this.setPlayerPosition(1, 7);
+  this.setGameField([
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],
+      ['FE', 'FE', 'CO', 'FE', 'CO', 'FE', 'FE', 'CO'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'SH'],
+      ['RO', 'FE', 'CO', 'FE', 'CO', 'FE', 'RO', 'FE'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'FE'],
+      ['CO', 'RO', 'RO', 'L1', 'L2', 'CO', 'FE', 'CO'],
+      ['FE', 'RO', 'FE', 'L3', 'L4', 'FE', 'CO', 'FE'],
+      ['HO', 'RO', 'FE', 'RO', 'RO', 'RO', 'RO', 'RO']
+    ]);
+  this.setWearingMaskAsRequired();
+  this.addVirus([0, 0], 'right');
+  this.addVirus([3, 7], 'right');
+  this.addCheckingLogic('return this.player.position.x === 0 && this.player.position.y === 7 ? null : "HOME_NOT_REACHED"');
+winButton:
+  url: ./task7
+  text: Next level
+initialScript: |-
+  import player
+
+  # Add your code here
+taskDescription: '(TODO: translate) Надень маску, купи продукты в маленьком магазине, дойди до дома и помой руки.'

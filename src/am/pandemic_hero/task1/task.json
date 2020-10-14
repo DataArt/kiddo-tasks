@@ -1,0 +1,11 @@
+{
+  "sceneType": "Pandemic",
+  "generatingFunc": "this.setPlayerPosition(0, 0); this.setGameField([ ['RO', 'CO', 'FE', 'CO', 'FE', 'RO', 'RO'], ['RO', 'RO', 'RO', 'RO', 'FE', 'FE', 'RO'], ['FE', 'FE', 'FE', 'RO', 'RO', 'FE', 'RO'], ['RO', 'RO', 'CO', 'CO', 'RO', 'FE', 'CO'], ['RO', 'RO', 'RO', 'FE', 'RO', 'RO', 'FE'], ['RO', 'RO', 'RO', 'CO', 'FE', 'RO', 'RO'], ['RO', 'RO', 'RO', 'RO', 'FE', 'CO', 'HO'] ]); this.addVirus([5, 0], 'right'); this.addVirus([0, 3], 'right'); this.addVirus([2, 4], 'left'); this.addVirus([1, 5], 'right'); this.addVirus([2, 6], 'right');",
+  "shouldPutOnMask": false,
+  "winButton": {
+    "url": "../task2.html",
+    "text": "Next level"
+  },
+  "initialScript": "import player\n\n# Add your code here",
+  "taskDescription": "Дойди до дома и помой руки."
+}
