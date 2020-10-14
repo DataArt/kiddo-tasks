@@ -1,0 +1,19 @@
+sceneType: console
+winButton:
+  url: ./task13
+  text: Next level
+initialScript: |
+  import console
+
+  # Додати код тут
+  
+taskDescription: Якщо значення змінної "b", помножене на 2, більше або дорівнює значенню змінної "a", то привласни змінній "c" суму змінних "a" і "b", інакше — їхній добуток.
+generatingFunc: >-
+  this.addConsoleVariable('a', Math.floor(Math.random() * Math.floor(10)));
+  this.addConsoleVariable('b', Math.floor(Math.random() * Math.floor(5)));
+  this.addConsoleVariable('c');
+  this.addCheckingLogic(`
+    if (this.getVariableValue("b") * 2 >= this.getVariableValue("a") && this.getVariableValue("c") === this.getVariableValue("a") + this.getVariableValue("b")) return null;
+    else if (this.getVariableValue("c") === this.getVariableValue("a") * this.getVariableValue("b")) return null;
+    else return "TASK_DONE_WRONG";
+  `);

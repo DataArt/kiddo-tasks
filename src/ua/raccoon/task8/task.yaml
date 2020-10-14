@@ -1,0 +1,24 @@
+sceneType: Raccoon
+generatingFunc: >-
+  this.setPlayerPosition(0, 1);
+  this.setGameField([
+      ['BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'BU'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'BU'],
+      ['BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'RO', 'BU'],
+      ['BU', 'RO', 'RO', 'RO', 'RO', 'RO', 'BU', 'RO', 'BU'],
+      ['BU', 'RO', 'BU', 'BU', 'BU', 'RO', 'BU', 'RO', 'BU'],
+      ['BU', 'RO', 'BU', 'FI', 'RO', 'RO', 'BU', 'RO', 'BU'],
+      ['BU', 'RO', 'BU', 'BU', 'BU', 'BU', 'BU', 'RO', 'BU'],
+      ['BU', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'BU'],
+      ['BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'BU']
+    ]);
+  this.addCheckingLogic('return this.player.position.x === 3 && this.player.position.y === 5 ? null : "FINISH_NOT_REACHED"');
+winButton:
+  url: ./task9
+  text: Next level
+initialScript: |
+  import raccoon
+
+  # Додати код тут
+  
+taskDescription: А ця доріжка має форму спіралі. Не забувай вчасно повертати, і ти швидко доведеш Єнота до прапорця!

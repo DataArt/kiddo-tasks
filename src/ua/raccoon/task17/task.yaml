@@ -1,0 +1,27 @@
+sceneType: Raccoon
+generatingFunc: >-
+  this.setPlayerPosition(2, 5);
+  this.setGameField([
+      ['BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'RO', 'BU'],
+      ['BU', 'GR', 'GR', 'RO', 'RO', 'RO', 'RO', 'FI'],
+      ['BU', 'GR', 'RO', 'RO', 'GR', 'GR', 'RO', 'BU'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],
+      ['OF', 'GR', 'RO', 'RO', 'OF', 'OF', 'RO', 'GR'],
+      ['BU', 'GR', 'RO', 'GR', 'OF', 'GR', 'OF', 'BU'],
+      ['BU', 'OF', 'OF', 'OF', 'OF', 'OF', 'GR', 'BU'],
+      ['BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'TR']
+    ]);
+  this.addCookies([3, 3], [5, 1]);
+  this.addMonster([6, 2], 'DOWN');
+  this.addMonster([0, 3], 'RIGHT');
+  this.addMonster([7, 3], 'LEFT');
+  this.addCheckingLogic('return this.player.position.x === 7 && this.player.position.y === 1 ? null : "FINISH_NOT_REACHED"');
+winButton:
+  url: ./task18
+  text: Next level
+initialScript: |
+  import raccoon
+
+  # Додати код тут
+  
+taskDescription: Збери все печивко, ухились від монстрів і доведи Єнота до прапора!

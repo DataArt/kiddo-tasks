@@ -1,0 +1,24 @@
+sceneType: Raccoon
+generatingFunc: >-
+  this.setPlayerPosition(0, 4);
+  this.setGameField([
+      ['BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'BU'],
+      ['BU', 'GR', 'GR', 'RO', 'RO', 'RO', 'FI'],
+      ['BU', 'RO', 'RO', 'RO', 'GR', 'OF', 'BU'],
+      ['BU', 'RO', 'RO', 'RO', 'RO', 'OF', 'BU'],
+      ['RO', 'RO', 'RO', 'GR', 'OF', 'GR', 'OF'],
+      ['BU', 'GR', 'GR', 'GR', 'GR', 'OF', 'BU'],
+      ['BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'TR']
+    ]);
+  this.addCookies([3, 3]);
+  this.addMonster([1, 3], 'RIGHT');
+  this.addCheckingLogic('return this.player.position.x === 6 && this.player.position.y === 1 ? null : "FINISH_NOT_REACHED"');
+winButton:
+  url: ./task14
+  text: Next level
+initialScript: |
+  import raccoon
+
+  # Додати код тут
+  
+taskDescription: Обережно, монстр! Він не такий розумний, як Єнот, і рухається одним маршрутом, але якщо зустріти його на шляху — чекай на біду! Візьми печиво, ухились від монстра та доведи Єнота до прапора.

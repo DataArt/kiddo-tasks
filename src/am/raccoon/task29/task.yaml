@@ -1,0 +1,34 @@
+sceneType: Raccoon
+generatingFunc: >-
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    const gameField = [ 
+                        ['GR', 'GR', 'BU', 'RO', 'RO', 'RO', 'RO'],
+                        ['GR', 'GR', 'BU', 'RO', 'BU', 'BU', 'RO'],
+                        ['BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'RO'],
+                        ['RO', 'RO', 'RO', 'RO', 'BU', 'RO', 'FI'],
+                        ['BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'RO'],
+                        ['GR', 'GR', 'BU', 'RO', 'BU', 'BU', 'RO'],
+                        ['GR', 'GR', 'BU', 'RO', 'RO', 'RO', 'RO'],
+                        ];
+    const randonPositions = [{x: 3, y: 2}, {x: 4, y: 3}, {x: 3, y: 4}];
+    const randomPosition = randonPositions[getRandomInt(0,2)];
+    gameField[randomPosition.y][randomPosition.x] = 'RO';
+    this.addKey([0, 3], 'yellow');
+    this.addGate([randomPosition.x, randomPosition.y], 'yellow')
+    this.setGameField(gameField);
+    this.setPlayerPosition(3, 3);
+    this.addCheckingLogic('return this.player.position.x === 6 && this.player.position.y === 3 ? null : `FINISH_NOT_REACHED`');
+winButton:
+  url: ./task1
+  text: Next level
+initialScript: |
+  import raccoon
+
+  # Ավելացրեք կոդ այստեղ
+
+  
+taskDescription: 'Դրոշին հասնելու ճանապարհին ՝ փակ դուռ է: Հետևաբար, դրա միջով անցնելու և դրոշին հասնելու համար Ջրարջը պետք է գտնի բանալին: Ուշադիր եղիր՝ դուռը փոխում է իր դիրքը ամեն անգամ, երբ մակարդակ է առաջանում: Հետեւաբար, փորձեք համընդհանուր լուծում գրել ցանկացած դեպքի համար:'

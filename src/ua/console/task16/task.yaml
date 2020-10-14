@@ -1,0 +1,24 @@
+sceneType: console
+winButton:
+  url: ./task17
+  text: Next level
+initialScript: |
+  import console
+
+  # Додати код тут
+  
+taskDescription: >-
+  Якщо значення змінної "a" дорівнює 2, то привласни змінній "c" суму змінних "a" і "b".
+  Якщо значення змінної "a" дорівнює 1, то привласни змінній "c" різницю змінних "b" і "a".
+  Якщо значення змінної "a" дорівнює 0, то привласни змінній "c" значення 0.
+
+generatingFunc: >-
+  this.addConsoleVariable('a', Math.round(Math.random() * Math.floor(2)), true);
+  this.addConsoleVariable('b', Math.round(Math.random() * Math.floor(5)), true);
+  this.addConsoleVariable('c');
+  this.addCheckingLogic(`
+    if (this.getVariableValue("a") === 2 && this.getVariableValue("c") === this.getVariableValue("a") + this.getVariableValue("b"))  return null;
+    else if (this.getVariableValue("a") === 1 && this.getVariableValue("c") === this.getVariableValue("b") - this.getVariableValue("a")) return null;
+    else if (this.getVariableValue("a") === 0 && this.getVariableValue("c") === 0) return null;
+    else return "TASK_DONE_WRONG"
+  `);

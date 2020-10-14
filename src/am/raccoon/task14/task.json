@@ -1,0 +1,10 @@
+{
+  "sceneType": "Raccoon",
+  "generatingFunc": "this.setPlayerPosition(4, 0); this.setGameField([ ['TR', 'TR', 'TR', 'TR', 'RO', 'RO', 'TR'], ['TR', 'TR', 'ST', 'TR', 'ST', 'RO', 'TR'], ['TR', 'TR', 'RO', 'RO', 'RO', 'RO', 'TR'], ['TR', 'TR', 'RO', 'TR', 'RO', 'TR', 'TR'], ['TR', 'ST', 'RO', 'RO', 'RO', 'TR', 'TR'], ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'], ['FI', 'RO', 'RO', 'TR', 'TR', 'TR', 'TR'] ]); this.addCookies([3, 5], [2, 5], [1, 5]); this.addMonster([0, 5], 'RIGHT'); this.addCheckingLogic('return this.player.position.x === 0 && this.player.position.y === 6');",
+  "winButton": {
+    "url": "../task9",
+    "text": "Next level"
+  },
+  "initialScript": "import raccoon\n\n# Add your code here",
+  "taskDescription": "Доведи енота до флага и собери все печеньки!"
+}

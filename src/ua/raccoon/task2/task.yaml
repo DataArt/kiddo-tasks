@@ -1,0 +1,26 @@
+sceneType: Raccoon
+generatingFunc: >-
+  this.setPlayerPosition(1, 0);
+  this.setGameField([
+      ['BU', 'RO', 'BU', 'BU', 'BU', 'BU'],
+      ['BU', 'RO', 'BU', 'BU', 'BU', 'BU'],
+      ['BU', 'RO', 'RO', 'RO', 'BU', 'BU'],
+      ['BU', 'BU', 'BU', 'RO', 'BU', 'BU'],
+      ['BU', 'BU', 'BU', 'RO', 'BU', 'BU'],
+      ['BU', 'BU', 'BU', 'RO', 'FI', 'BU'],
+    ]);
+  this.addCheckingLogic('return this.player.position.x === 4 && this.player.position.y === 5 ? null : "FINISH_NOT_REACHED"');
+winButton:
+  url: ./task3
+  text: Next level
+initialScript: |
+  import raccoon
+  
+  raccoon.go_down(2)
+
+  # Додати код тут
+  
+taskDescription: >-
+  Єнот може ходити не лише вправо, а і в інші боки. Наприклад, вниз. Для цього в нього є метод *raccoon.go_down(n)*, де n — це кількість кроків.
+  Якщо потрібно зробити один крок, вказувати це не обов'язково, можна написати *raccoon.go_down()*. Те саме стосується й інших методів руху, наприклад, *raccoon.go_right()* — Єнот піде вправо на одну клітинку.
+  А тепер давай допоможемо єноту цією хитромудрою доріжкою дістатися до фінішу! Першу команду для руху ми вже написали за тебе. Всі подальші команди пиши щоразу на новому рядку.

@@ -1,0 +1,28 @@
+sceneType: Raccoon
+generatingFunc: >-
+  this.setPlayerPosition(1, 4);
+  this.setGameField([
+      ['RO', 'RO', 'RO', 'RO', 'RO'],
+      ['RO', 'BU', 'BU', 'BU', 'RO'],
+      ['RO', 'BU', 'GR', 'BU', 'RO'],
+      ['RO', 'BU', 'BU', 'BU', 'RO'],
+      ['RO', 'RO', 'BU', 'FI', 'RO'],
+      
+    ]);
+  this.addCheckingLogic('return this.player.position.x === 3 && this.player.position.y === 4 ? null : "FINISH_NOT_REACHED"');
+winButton:
+  url: ./task4
+  text: Next level
+initialScript: |
+  import raccoon
+
+  #raccoon.go_left()
+  #raccoon.go_up()
+  #raccoon.go_right()
+  #raccoon.go_down()
+  #raccoon.go_left()
+  
+taskDescription: >-
+  Для того, щоб Єнот міг ходити в усі 4 боки, давай вивчимо ще 2 методи: *raccoon.go_left(n)* для ходьби вліво та *raccoon.go_up(n)* для ходьби вгору, де n — це кількість кроків.
+  У цьому рівні Єнота і фініш розділяє кущ, який так просто не перестрибнути, тому йому доведеться прогулятися, щоб знайти правильний шлях. Давай йому в цьому допоможемо!
+  У редакторі вже написані команди, вони закоментовані (перед кожною стоїть знак #, і програма її не виконує). Прибери знак # перед кожною командою та передай (де це потрібно) в методи руху необхідну кількість кроків.

@@ -1,0 +1,17 @@
+sceneType: Raccoon
+generatingFunc: >-
+    const gameField = [ ['RO', 'RO', 'GR', 'GR', 'GR', 'FI'], ['GR', 'RO', 'RO', 'GR', 'GR', 'RO'], ['GR', 'GR', 'RO', 'RO', 'GR', 'RO'], ['GR', 'GR', 'GR', 'RO', 'GR', 'RO'], ['GR', 'GR', 'GR', 'RO', 'RO', 'RO'], ['GR', 'GR', 'GR', 'GR', 'GR', 'RO']];
+    this.setGameField(gameField);
+    this.setPlayerPosition(0, 0);
+    this.addMines([2, 1]);
+    this.addMonster([5, 1], 'DOWN');
+    this.addCheckingLogic('return this.player.position.x === 5 && this.player.position.y === 0 ? null : `FINISH_NOT_REACHED`');
+winButton:
+  url: ./task26
+  text: Next level
+initialScript: |
+  import raccoon
+
+  # Ավելացրեք կոդ այստեղ
+  
+taskDescription: 'Վերջնագծի ճանապարհին պարեկում է հրեշը, և թվում է, թե նրան հնարավոր չէ շրջանցել, Բայց փորձիր չեզոքացնել նրան ռումբի օգնությամբ: Վերցրու այն և տեղադրիր հրեշի ճանապարհին (*raccoon.set_mine()*) և չմոռամաս գոնե  մեկ վանդակ հետ վազել: (*raccoon.wait(քայլերի քանակը)*), մինչ հրեշը կտրորի այն: ԲՈՒՄ! Եվ հետո հասիր վերջնագծին:'

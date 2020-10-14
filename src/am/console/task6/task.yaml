@@ -1,0 +1,15 @@
+sceneType: console
+winButton:
+  url: ./task7
+  text: Next level
+initialScript: |
+  import console
+
+  # Ավելացրեք կոդ այստեղ
+  
+taskDescription: '«a» փոփոխականի արժեքը բաժանիր «b» փոփոխականի արժեքի վրա և ստացված թիվը գրիր «c» փոփոխականի մեջ:'
+generatingFunc: >-
+  this.addConsoleVariable('a', Math.floor(Math.random() * Math.floor(11)));
+  this.addConsoleVariable('b', Math.floor(Math.random() * Math.floor(6)) + 1);
+  this.addConsoleVariable('c');
+  this.addCheckingLogic('return this.getVariableValue("c") === Math.floor(this.getVariableValue("a") / this.getVariableValue("b")) ? null : "TASK_DONE_WRONG" ');

@@ -1,0 +1,25 @@
+sceneType: Pandemic
+generatingFunc: >-
+  this.setPlayerPosition(0, 1);
+  this.setGameField([
+      ['HO', 'FE', 'CO', 'FE', 'FE', 'RO', 'RO'],
+      ['RO', 'RO', 'RO', 'RO', 'CO', 'FE', 'RO'],
+      ['RO', 'FE', 'FE', 'RO', 'RO', 'CO', 'RO'],
+      ['RO', 'CO', 'FE', 'CO', 'RO', 'FE', 'CO'],
+      ['RO', 'RO', 'FE', 'FE', 'RO', 'CO', 'RO'],
+      ['FE', 'RO', 'RO', 'RO', 'RO', 'FE', 'RO'],
+      ['FE', 'CO', 'FE', 'CO', 'FE', 'CO', 'RO']
+    ]);
+  this.addMasks([4, 2], [4, 5], [2, 5]);
+  this.addSanitizers([1, 4]);
+  this.addVirus([6, 2], 'up');
+  this.addVirus([6, 6], 'up');
+  this.addCheckingLogic('return this.player.position.x === 0 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
+winButton:
+  url: ./task5
+  text: Next level
+initialScript: |-
+  import player
+
+  # Add your code here
+taskDescription: '(TODO: translate) Собери все маски и санитайзеры, дойди до дома и помой руки.'

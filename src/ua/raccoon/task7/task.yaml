@@ -1,0 +1,21 @@
+sceneType: Raccoon
+generatingFunc: >-
+  this.setPlayerPosition(5, 0);
+  this.setGameField([
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'RO'],
+      ['RO', 'RO', 'RO', 'GR', 'GR', 'RO'],
+      ['RO', 'RO', 'RO', 'BU', 'BU', 'RO'],
+      ['RO', 'BU', 'BU', 'RO', 'RO', 'RO'],
+      ['RO', 'GR', 'GR', 'RO', 'RO', 'RO'],
+      ['FI', 'RO', 'RO', 'RO', 'RO', 'RO']
+    ]);
+  this.addCheckingLogic('return this.player.position.x === 0 && this.player.position.y === 5 ? null : "FINISH_NOT_REACHED"');
+winButton:
+  url: ./task8
+  text: Next level
+initialScript: |
+  import raccoon
+
+  # Додати код тут
+  
+taskDescription: Єнот дуже полюбляє гуляти, а тут якраз багато місця. Тільки не забувай, що по кущах і на травичку йому ходити не можна, а після прогулянки треба дійти до прапора.
