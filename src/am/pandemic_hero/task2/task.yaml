@@ -21,4 +21,4 @@ initialScript: |-
   import player
 
   # Add your code here
-taskDescription: '(TODO: translate) Дойди до дома и помой руки.'
+taskDescription: 'Արի օգնենք մեր Հերոսին քայլել  դեպի վերև և ձախ՝ օգտագործելով *player.go_up(քայլերի քանակ)* և *player.go_left(քայլերի քանակ)* մեթոդները: Հադսիր տուն և չմոռանաս լվանալ ձեռքերդ:'
