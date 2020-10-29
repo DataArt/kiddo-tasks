@@ -23,4 +23,10 @@ initialScript: |-
   import player
 
   # Add your code here
-taskDescription: '(TODO: translate) Дойди до дома и помой руки.'
+taskDescription: >-
+  We think you have already learned to live with the pandemic. So, let’s remember the “survival code” and walk through the town observing all safety precautions. Be careful not to contract the virus. To avoid it, wash your hands frequently, use a hand sanitizer, wear a mask in public places, and keep distance from others. To pass the game, you need to learn how to control Pandemic Hero. At this level, use the following methods: 
+  *player.go_right(2)* ─ moves the hero two cells to the right.
+  *player.go_down(2)* ─ moves the hero two cells down.
+  To move the hero only one cell in any direction, do not specify the argument, for example: *player.go_right()*.
+  To wash the hands, use the *player.wash_hands()*method. Now, help Pandemic Hero reach home and wash their hands. Try and see that you can make it!
+

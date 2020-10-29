@@ -21,4 +21,5 @@ initialScript: |-
   import player
 
   # Add your code here
-taskDescription: '(TODO: translate) Дойди до дома и помой руки.'
+taskDescription: >-
+  Let’s help Pandemic Hero move upwards and to the left. For that, use the *player.go_up(cell_count)* and *player.go_left(cell_count)* methods respectively. Reach home and remember to wash your hands!

@@ -20,4 +20,5 @@ initialScript: |-
   import player
 
   # Add your code here
-taskDescription: '(TODO: translate) Дойди до дома и помой руки.'
+taskDescription: >-
+  3.	Watch out! There is a virus on the game filed. Use the learned methods to help Pandemic Hero reach home (and wash the hands!).
