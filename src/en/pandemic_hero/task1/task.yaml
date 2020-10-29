@@ -28,5 +28,5 @@ taskDescription: >-
   *player.go_right(2)* ─ moves the hero two cells to the right.
   *player.go_down(2)* ─ moves the hero two cells down.
   To move the hero only one cell in any direction, do not specify the argument, for example: *player.go_right()*.
-  To wash the hands, use the *player.wash_hands()*method. Now, help Pandemic Hero reach home and wash their hands. Try and see that you can make it!
+  To wash the hands, use the *player.wash_hands()* method. Now, help Pandemic Hero reach home and wash their hands. Try and see that you can make it!
 
