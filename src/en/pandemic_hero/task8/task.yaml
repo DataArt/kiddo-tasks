@@ -24,4 +24,4 @@ initialScript: |-
 
   # Add your code here
 taskDescription: >-
-  8.	Streets are becoming even more crowded! Put on your mask, keep distance (wait for others to pass by using the *player.wait(move_count)* method), steer clear of the shopping center and reach home.
+  Streets are becoming even more crowded! Put on your mask, keep distance (wait for others to pass by using the *player.wait(move_count)* method), steer clear of the shopping center and reach home.

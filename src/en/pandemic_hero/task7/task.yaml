@@ -23,4 +23,4 @@ initialScript: |-
 
   # Add your code here
 taskDescription: >-
-  7.	There are so many people in the street today. It is a good thing that they are all wearing masks ─ make sure you have your mask on as well. Remember to keep at least one cell distance from others. For that, use the *player.wait(move_count)* method as follows: the hero stops and waits for a person to pass by. Let’s help Pandemic Hero reach home.
+  There are so many people in the street today. It is a good thing that they are all wearing masks ─ make sure you have your mask on as well. Remember to keep at least one cell distance from others. For that, use the *player.wait(move_count)* method as follows: the hero stops and waits for a person to pass by. Let’s help Pandemic Hero reach home.
