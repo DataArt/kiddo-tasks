@@ -24,5 +24,4 @@ initialScript: |-
 
   # Add your code here
 taskDescription: >-
-  (TODO: translate) Надень маску, дойди до дома, держа дистанцию в одну клетку от людей, и помой
-  руки.
+  Streets are becoming even more crowded! Put on your mask, keep distance (wait for others to pass by using the *player.wait(move_count)* method), steer clear of the shopping center and reach home.

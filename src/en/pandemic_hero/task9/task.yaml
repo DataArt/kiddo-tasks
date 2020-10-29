@@ -21,4 +21,5 @@ initialScript: |-
   import player
 
   # Add your code here
-taskDescription: '(TODO: translate) Собери все маски и санитайзеры, дойди до дома и помой руки.'
+taskDescription: >-
+  Pandemic Hero has run out of masks and sanitizers! Help the hero collect the new ones and reach home. Remember that you will need to collect all of the objects to complete the level.

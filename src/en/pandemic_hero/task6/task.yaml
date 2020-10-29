@@ -22,4 +22,5 @@ initialScript: |-
   import player
 
   # Add your code here
-taskDescription: '(TODO: translate) Надень маску, купи продукты в маленьком магазине, дойди до дома и помой руки.'
+taskDescription: >-
+  Remember what we mentioned about a big and a small shop? Let’s put this knowledge to use. Help Pandemic Hero shop for some groceries (wearing a mask!) and carry them back home.

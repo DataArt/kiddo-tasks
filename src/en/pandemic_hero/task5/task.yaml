@@ -20,4 +20,5 @@ initialScript: |-
   import player
 
   # Add your code here
-taskDescription: '(TODO: translate) Надень маску, купи продукты в маленьком магазине, дойди до дома и помой руки.'
+taskDescription: >-
+  Now Pandemic Hero is about to buy some groceries. Remember that big shopping malls are usually crowded, so choose a small shop. Also do not forget about the mask ─ put it on before you set off (use the *player.put_on_mask()* method). To buy the groceries, enter the chosen shop and use the *player.get_products()* method and then carry the purchases home.
