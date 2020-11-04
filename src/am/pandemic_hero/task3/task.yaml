@@ -15,9 +15,9 @@ generatingFunc: >-
   this.addCheckingLogic('return this.player.position.x === 1 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
 winButton:
   url: ./task4
-  text: Next level
+  text: Հաջորդ մակարդակը
 initialScript: |-
   import player
 
-  # Add your code here
+  # Ավելացրեք կոդ այստեղ
 taskDescription: 'Զգուշացի՛ր, ուղու վրա վիրուս է հայտնվել: Ուշադիր եղիր, թույլ չտա՛ս, որ նա քեզ բռնի: Օգտագործելով ավելի վաղ սովորած մեթոդները, օգնիր Հերոսին տուն հասնել (և լվանալ ձեռքերը):'

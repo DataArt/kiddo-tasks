@@ -17,9 +17,9 @@ generatingFunc: >-
   this.addCheckingLogic('return this.player.position.x === 0 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
 winButton:
   url: ./task5
-  text: Next level
+  text: Հաջորդ մակարդակը
 initialScript: |-
   import player
 
-  # Add your code here
+  # Ավելացրեք կոդ այստեղ
 taskDescription: 'Հերոսը վերջապես հասել է օգտակար հիգիենայի պարագաներով մակարդակին։ Դրանք բոլորը  իր համար հետագայում շատ օգտակար կլինեն: Հավաքիր բոլոր պարագաները և հասիր տուն: Ձեռքերը նույնպես պետք է լվանալ (և ոչ միայն այս մակարդակում, այլ նաև հետագա բոլոր մակարդակներում:Միշտ օգտագործիր այս կանոնը քո կյանքում):'

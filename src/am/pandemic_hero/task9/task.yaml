@@ -16,9 +16,9 @@ generatingFunc: >-
   this.addCheckingLogic('return this.player.position.x === 6 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
 winButton:
   url: ./task10
-  text: Next level
+  text: Հաջորդ մակարդակը
 initialScript: |-
   import player
 
-  # Add your code here
+  # Ավելացրեք կոդ այստեղ
 taskDescription: 'Դիմակները և ախտահանող միջոցները վերջացե՛լ են: Օգնիր Հերոսին նորից դրանք հավաքել և տուն հասնել: Հիշիր, որ մակարդակն ավարտելու համար հարկավոր է հավաքել բոլոր իրերը:'

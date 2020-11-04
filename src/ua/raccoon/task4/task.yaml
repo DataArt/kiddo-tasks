@@ -13,7 +13,7 @@ generatingFunc: >-
   this.addCheckingLogic('return (this.player.position.x === 0 && this.player.position.y === 0)  || (this.player.position.x === 6 && this.player.position.y === 0)  || (this.player.position.x === 0 && this.player.position.y === 6)  || (this.player.position.x === 6 && this.player.position.y === 6) ? null : "FINISH_NOT_REACHED"');
 winButton:
   url: ./task5
-  text: Next level
+  text: Наступний рівень
 initialScript: |
   import raccoon
 

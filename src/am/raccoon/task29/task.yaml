@@ -22,9 +22,9 @@ generatingFunc: >-
     this.setGameField(gameField);
     this.setPlayerPosition(3, 3);
     this.addCheckingLogic('return this.player.position.x === 6 && this.player.position.y === 3 ? null : `FINISH_NOT_REACHED`');
-winButton:
-  url: ./task1
-  text: Next level
+#  winButton:
+#   url: ./task1
+#   text: Հաջորդ մակարդակը
 initialScript: |
   import raccoon
 

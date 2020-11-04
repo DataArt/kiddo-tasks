@@ -15,7 +15,7 @@ generatingFunc: >-
   this.addCheckingLogic('return this.player.position.x === 0 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
 winButton:
   url: ./task6
-  text: Next level
+  text: Следующий уровень
 initialScript: |-
   import player
 
