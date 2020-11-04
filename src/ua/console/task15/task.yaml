@@ -1,7 +1,7 @@
 sceneType: console
 winButton:
   url: ./task16
-  text: Next level
+  text: Наступний рівень
 initialScript: |
   import console
 

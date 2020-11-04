@@ -16,9 +16,9 @@ generatingFunc: >-
   this.addCheckingLogic('return this.player.position.x === 3 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
 winButton:
   url: ./task3
-  text: Next level
+  text: Հաջորդ մակարդակը
 initialScript: |-
   import player
 
-  # Add your code here
+  # Ավելացրեք կոդ այստեղ
 taskDescription: 'Արի օգնենք մեր Հերոսին քայլել  դեպի վերև և ձախ՝ օգտագործելով *player.go_up(քայլերի քանակ)* և *player.go_left(քայլերի քանակ)* մեթոդները: Հադսիր տուն և չմոռանաս լվանալ ձեռքերդ:'

@@ -18,10 +18,10 @@ generatingFunc: >-
   this.addCheckingLogic('return this.player.position.x === 7 && this.player.position.y === 6 ? null : "HOME_NOT_REACHED"');
 winButton:
   url: ./task9
-  text: Next level
+  text: Հաջորդ մակարդակը
 initialScript: |-
   import player
 
-  # Add your code here
+  # Ավելացրեք կոդ այստեղ
 taskDescription: >-
   Մարդիկ էլ ավելի շա՛տ են: Դիմակ կրիր, պահպանիր հեռավորություը (անհրաժեշտության դեպքում սպասիր՝ օգտագործելով նախկինում սովորած *player.wait(քայլերի քանակը)* մեթոդը), շրջանցիր առևտրի կենտրոնը և տուն հասիր: 

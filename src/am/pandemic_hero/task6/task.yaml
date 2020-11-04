@@ -17,9 +17,9 @@ generatingFunc: >-
   this.addCheckingLogic('return this.player.position.x === 0 && this.player.position.y === 7 ? null : "HOME_NOT_REACHED"');
 winButton:
   url: ./task7
-  text: Next level
+  text: Հաջորդ մակարդակը
 initialScript: |-
   import player
 
-  # Add your code here
+  # Ավելացրեք կոդ այստեղ
 taskDescription: 'Հիշու՞մ ես, թե ինչ ասացինք մեծ ու փոքր խանութների մասին: Արի ամրապնդենք այս գիտելիքները: Օգնիր Հերոսին գնալ խանութ (դիմակը հագած) ապրանքներ գնելու համար և7 տուն վերադառնալ:'

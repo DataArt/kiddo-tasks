@@ -10,7 +10,7 @@ generatingFunc: >-
     this.addCheckingLogic('return this.player.position.x === ' + random + ' && this.player.position.y === 0 ? null : `FINISH_NOT_REACHED`');
 winButton:
   url: ./task27
-  text: Next level
+  text: Հաջորդ մակարդակը
 initialScript: |
   import raccoon
 

@@ -5,7 +5,7 @@ generatingFunc: >-
   this.addCheckingLogic('return this.consoleContent.includes("17") ? null : "TASK_DONE_WRONG"');
 winButton:
   url: ./task3
-  text: Next level
+  text: Հաջորդ մակարդակը
 initialScript: |
   import console
 
