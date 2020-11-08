@@ -18,11 +18,10 @@ generatingFunc: >-
   this.addCheckingLogic('return this.player.position.x === 7 && this.player.position.y === 6 ? null : "HOME_NOT_REACHED"');
 winButton:
   url: ./task9
-  text: Next level
+  text: Наступний рівень
 initialScript: |-
   import player
 
-  # Add your code here
+  # Додати код тут
 taskDescription: >-
-  (TODO: translate) Надень маску, дойди до дома, держа дистанцию в одну клетку от людей, и помой
-  руки.
+  Людей стало ще більше! Надінь маску, дотримуйся дистанції (чекай, якщо потрібно, за допомогою вивченого раніше методу *player.wait(кількість_рухів)*), обходи стороною торговий центр і дійди додому

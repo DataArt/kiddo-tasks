@@ -17,9 +17,10 @@ generatingFunc: >-
   this.addCheckingLogic('return this.player.position.x === 0 && this.player.position.y === 7 ? null : "HOME_NOT_REACHED"');
 winButton:
   url: ./task7
-  text: Next level
+  text: Наступний рівень
 initialScript: |-
   import player
 
-  # Add your code here
-taskDescription: '(TODO: translate) Надень маску, купи продукты в маленьком магазине, дойди до дома и помой руки.'
+  # Додати код тут
+taskDescription: : >-
+  Пам'ятаєш, що ми казали про великий і маленький магазини? Давай закріпимо ці знання. Допоможи Герою сходити до магазину (в масці!) за продуктами та повернутися з ними додому.

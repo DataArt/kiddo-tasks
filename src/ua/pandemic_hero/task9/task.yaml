@@ -16,9 +16,10 @@ generatingFunc: >-
   this.addCheckingLogic('return this.player.position.x === 6 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
 winButton:
   url: ./task10
-  text: Next level
+  text: Наступний рівень
 initialScript: |-
   import player
 
-  # Add your code here
-taskDescription: '(TODO: translate) Собери все маски и санитайзеры, дойди до дома и помой руки.'
+  # Додати код тут
+taskDescription: : >-
+  Маски та санітайзери скінчились! Допоможи Герою зібрати нові та дістатися додому. Пам'ятай, що для проходження рівня потрібно зібрати всі предмети.

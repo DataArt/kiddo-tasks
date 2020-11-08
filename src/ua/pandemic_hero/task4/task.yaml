@@ -17,9 +17,10 @@ generatingFunc: >-
   this.addCheckingLogic('return this.player.position.x === 0 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
 winButton:
   url: ./task5
-  text: Next level
+  text: Наступний рівень
 initialScript: |-
   import player
 
-  # Add your code here
-taskDescription: '(TODO: translate) Собери все маски и санитайзеры, дойди до дома и помой руки.'
+  # Додати код тут
+taskDescription: >-
+  Герой нарешті дістався до рівня з корисними предметами гігієни, які дуже знадобляться йому в подальшому! Збери їх усі та дійди додому. Руки теж потрібно помити (і не лише на цьому рівні, а й на всіх подальших. Користуйся цим правилом завжди у своєму житті!).
