@@ -16,11 +16,10 @@ generatingFunc: >-
   this.addCheckingLogic('return this.player.position.x === 0 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
 winButton:
   url: ./task11
-  text: Next level
+  text: Наступний рівень
 initialScript: |-
   import player
 
-  # Add your code here
+  # Додати код тут
 taskDescription: >-
-  (TODO: translate) Надень маску, дойди до дома, уворачиваясь от вирусов, и помой руки. Вирус
-  можно уничтожить, используя функцию disinfect().
+  Знову на доріжках віруси! Давай допоможемо Герою, надівши маску, дійти додому. Якщо на шляху зустрінеться вірус, його можна знищити санітайзером за допомогою методу *player.disinfect(direction)*, direction — напрямок, число від 0 до 7, що означає клітинку навколо гравця. 0 — клітинка зверху від персонажа, 1 — клітинка справа вгорі від персонажа і так далі за годинниковою стрілкою. Вдалої дезінфекції!

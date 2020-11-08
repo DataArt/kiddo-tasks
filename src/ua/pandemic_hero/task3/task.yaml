@@ -15,9 +15,10 @@ generatingFunc: >-
   this.addCheckingLogic('return this.player.position.x === 1 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
 winButton:
   url: ./task4
-  text: Next level
+  text: Наступний рівень
 initialScript: |-
   import player
 
-  # Add your code here
-taskDescription: '(TODO: translate) Дойди до дома и помой руки.'
+  # Додати код тут
+taskDescription: >-
+  Обережно, на доріжці з'явився вірус! Будь обережним, не дай йому себе зловити! Використовуючи вивчені раніше методи, допоможи Герою дійти додому (та помити руки).

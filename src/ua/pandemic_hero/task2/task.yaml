@@ -16,9 +16,10 @@ generatingFunc: >-
   this.addCheckingLogic('return this.player.position.x === 3 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
 winButton:
   url: ./task3
-  text: Next level
+  text: Наступний рівень
 initialScript: |-
   import player
 
-  # Add your code here
-taskDescription: '(TODO: translate) Дойди до дома и помой руки.'
+  # Додати код тут
+taskDescription: >-
+  Давай допоможемо нашому Герою ходити вгору та вліво: методи *player.go_up(кількість_кроків)* і *player.go_left(кількість_кроків)* у цьому допоможуть. Дійди додому та не забудь помити руки!
