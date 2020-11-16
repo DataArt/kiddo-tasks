@@ -1,0 +1,36 @@
+sceneType: Raccoon
+generatingFunc: >-
+  this.setPlayerPosition(0, 6);
+  this.setGameField([
+      ['GR', 'RO', 'RO', 'GR', 'GR', 'GR', 'GR', 'GR', 'GR'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'GR'],
+      ['RO', 'RO', 'ST', 'ST', 'RO', 'ST', 'ST', 'RO', 'RO'],
+      ['GR', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'GR'],
+      ['GR', 'RO', 'RO', 'ST', 'RO', 'ST', 'RO', 'RO', 'RO'],
+      ['GR', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'GR'],
+      ['RO', 'RO', 'ST', 'ST', 'RO', 'ST', 'ST', 'GR', 'GR'],
+      ['PY', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'GR'],
+      ['GR', 'GR', 'FI', 'RO', 'RO', 'GR', 'GR', 'GR', 'GR']
+    ]);
+  this.addCookies([0, 2], [2, 0], [4, 2], [2, 4], [6, 4], [4, 6]);
+  this.addMonster([1, 3], 'DOWN');
+  this.addMonster([5, 1], 'LEFT');
+  this.addMonster([3, 3], 'RIGHT');
+  this.addMonster([7, 2], 'UP');
+  this.addMonster([3, 5], 'RIGHT');
+  this.addMonster([1, 7], 'LEFT');
+  this.addCustomTile('ST', 'https://i.imgur.com/ZKCX48X.png');
+  this.addCustomTile('TR', 'https://i.imgur.com/ELvTBrD.png');
+  this.addCheckingLogic('return this.player.position.x === 2 && this.player.position.y === 8 ? null : "FINISH_NOT_REACHED"');
+winButton:
+  url: ./task23
+  text: Наступний рівень
+initialScript: |
+  import raccoon
+
+  # Додати код тут
+  
+taskDescription: >-
+  Єнота вкусив пітон, тепер він рухається змійкою і йому терміново потрібно підкріпитись.
+  Використовуючи функцію *goLikeSerpent()*, доведи єнота до прапора та збери все печивко!
+  Приклад виклику: *goLikeSerpent('right', 'up')*

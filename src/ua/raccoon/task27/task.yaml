@@ -1,0 +1,24 @@
+sceneType: Raccoon
+generatingFunc: >-
+    const gameField = [ ['RO', 'RO', 'GR', 'GR', 'GR', 'FI'],
+                        ['RO', 'RO', 'RO', 'GR', 'GR', 'RO'],
+                        ['RO', 'GR', 'RO', 'RO', 'GR', 'RO'],
+                        ['RO', 'GR', 'GR', 'RO', 'RO', 'RO'],
+                        ['RO', 'GR', 'GR', 'GR', 'GR', 'RO'],
+                        ['RO', 'RO', 'RO', 'RO', 'RO', 'RO']
+                       ];
+    this.setGameField(gameField);
+    this.setPlayerPosition(0, 0);
+    this.addTurrets([0, 4]);
+    this.addMonster([5, 1], 'DOWN');
+    this.addMonster([2, 2], 'RIGHT');
+    this.addCheckingLogic('return this.player.position.x === 5 && this.player.position.y === 0 ? null : `FINISH_NOT_REACHED`');
+winButton:
+  url: ./task28
+  text: Наступний рівень
+initialScript: |
+  import raccoon
+
+  # Додати код тут
+  
+taskDescription: Знову на шляху до прапора монстри, одного з них ще й ніяк не оминути! Тут тобі допоможе гармата (самонавідна, багатозарядна!). Підбери її, встанови (*raccoon.place_turret()*) поруч з маршрутом слідування монстра та почекай на її залп. Шлях вільний — дістанься до фінішу!

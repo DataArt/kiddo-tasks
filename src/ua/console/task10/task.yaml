@@ -1,0 +1,15 @@
+sceneType: console
+winButton:
+  url: ./task11
+  text: Наступний рівень
+initialScript: |
+  import console
+
+  # Додати код тут
+  
+taskDescription: Якщо значення змінної "a" більше значення змінної "b", то запиши у змінну "c" значення змінної "a", інакше — значення змінної "b".
+generatingFunc: >-
+  this.addConsoleVariable('a', Math.floor(Math.random() * Math.floor(6)));
+  this.addConsoleVariable('b', Math.floor(Math.random() * Math.floor(6)));
+  this.addConsoleVariable('c');
+  this.addCheckingLogic(' if (this.getVariableValue("a") > this.getVariableValue("b") && this.getVariableValue("c") === this.getVariableValue("a")) return null; else if (this.getVariableValue("a") <= this.getVariableValue("b") && this.getVariableValue("c") === this.getVariableValue("b")) return null; else return "TASK_DONE_WRONG" ');

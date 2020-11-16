@@ -1,0 +1,21 @@
+sceneType: console
+winButton:
+  url: ./task22
+  text: Наступний рівень
+initialScript: |
+  import console
+
+  # Додати код тут
+  
+taskDescription: >-
+  Виведи слово "Python" у консоль "n" раз без переходу на новий рядок і без пробілів.
+
+generatingFunc: >-
+  this.addConsoleVariable('n', Math.round(Math.random() * Math.floor(5)) + 2, true);
+  this.addCheckingLogic(`
+    if (this.consoleContent.includes('Python'.repeat(this.getVariableValue('n')))) {
+      return null;
+    } else {
+      return "TASK_DONE_WRONG";
+    }
+  `)

@@ -1,0 +1,19 @@
+sceneType: console
+winButton:
+  url: ./task14
+  text: Наступний рівень
+initialScript: |
+  import console
+
+  # Додати код тут
+  
+taskDescription: Якщо значення змінної "b" не дорівнює 0, то привласни змінній "c" частку змінних "a" і "b", інакше — значення змінної "a".
+generatingFunc: >-
+  this.addConsoleVariable('a', Math.round(Math.random() * 100) / 100);
+  this.addConsoleVariable('b', Math.round(Math.random() * Math.floor(2)));
+  this.addConsoleVariable('c');
+  this.addCheckingLogic(`
+    if (this.getVariableValue("b") !== 0 && this.getVariableValue("c") === this.getVariableValue("a") / this.getVariableValue("b")) return null;
+    else if (this.getVariableValue("c") === this.getVariableValue("a") - this.getVariableValue("b")) return null;
+    else return "TASK_DONE_WRONG";
+  `);

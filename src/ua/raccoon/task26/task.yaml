@@ -1,0 +1,19 @@
+sceneType: Raccoon
+generatingFunc: >-
+  const random = (Math.floor(Math.random() * (4)) + 1) * 2;
+    const gameField = [ ['RO', 'BU', 'RO', 'BU', 'RO', 'BU', 'RO', 'BU', 'RO'], ['RO', 'BU', 'RO', 'BU', 'RO', 'BU', 'RO', 'BU', 'RO'], ['RO', 'BU', 'RO', 'BU', 'RO', 'BU', 'RO', 'BU', 'RO'], ['RO', 'BU', 'RO', 'BU', 'RO', 'BU', 'RO', 'BU', 'RO'], ['RO', 'BU', 'RO', 'BU', 'RO', 'BU', 'RO', 'BU', 'RO'], ['RO', 'BU', 'RO', 'BU', 'RO', 'BU', 'RO', 'BU', 'RO'], ['RO', 'BU', 'RO', 'BU', 'RO', 'BU', 'RO', 'BU', 'RO'], ['RO', 'BU', 'RO', 'BU', 'RO', 'BU', 'RO', 'BU', 'RO'], ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO']];
+    gameField[0][random] = 'FI'
+    this.setGameField(gameField);
+    this.setPlayerPosition(0, 0);
+    this.addMines([0, 4]) 
+    this.addMonster([random, 3], 'DOWN') 
+    this.addCheckingLogic('return this.player.position.x === ' + random + ' && this.player.position.y === 0 ? null : `FINISH_NOT_REACHED`');
+winButton:
+  url: ./task27
+  text: Наступний рівень
+initialScript: |
+  import raccoon
+
+  # Додати код тут
+  
+taskDescription: Доведи Єнота до прапора. На шляху до прапора може ходити монстр, його можна знищити за допомогою міни. Прапор і монстр при генерації рівня розташовуються щоразу на різних доріжках, тож постарайся знайти універсальне розв’язання задачі для будь-якого випадку.

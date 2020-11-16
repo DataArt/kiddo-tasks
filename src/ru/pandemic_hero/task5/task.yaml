@@ -10,14 +10,15 @@ generatingFunc: >-
       ['CO', 'RO', 'RO', 'RO', 'RO', 'SH', 'FE'],
       ['FE', 'CO', 'FE', 'CO', 'CO', 'FE', 'FE']
     ]);
+  this.setWearingMaskAsRequired();
   this.addVirus([6, 3], 'left');
   this.addCheckingLogic('return this.player.position.x === 0 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
-shouldPutOnMask: true
 winButton:
   url: ./task6
-  text: Next level
+  text: Следующий уровень
 initialScript: |-
   import player
 
-  # Add your code here
-taskDescription: 'Надень маску, купи продукты в маленьком магазине, дойди до дома и помой руки.'
+  # Добавь код здесь
+taskDescription: >- 
+    А сейчас  нашему Герою предстоит купить продукты. Помни, что в торговом центре обычно много людей, поэтому выбери маленький магазин! Также не забудь, что у нас есть маска, поэтому перед тем как куда-то идти, нужно ее надеть (метод *player.put_on_mask()*). Чтобы купить продукты, зайди в него и используй метод *player.get_products()*. Затем отнеси продукты домой.

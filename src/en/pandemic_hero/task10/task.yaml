@@ -1,0 +1,25 @@
+sceneType: Pandemic
+generatingFunc: >-
+  this.setPlayerPosition(5, 5);
+  this.setGameField([
+      ['HO', 'FE', 'FE', 'RO', 'FE', 'FE', 'RO'],
+      ['RO', 'RO', 'RO', 'CO', 'RO', 'RO', 'RO'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'CO'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'CO'],
+      ['RO', 'RO', 'FE', 'FE', 'RO', 'RO', 'CO'],
+      ['FE', 'FE', 'RO', 'RO', 'RO', 'RO', 'RO'],
+      ['CO', 'RO', 'FE', 'RO', 'CO', 'RO', 'RO']
+    ]);
+  this.setWearingMaskAsRequired();
+  this.addVirus([3, 3], 'up');
+  this.addVirus([6, 6], 'left');
+  this.addCheckingLogic('return this.player.position.x === 0 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
+winButton:
+  url: ./task11
+  text: Next level
+initialScript: |-
+  import player
+
+  # Add your code here
+taskDescription: >-
+  Oh no, there are viruses on the game field again. Let’s help Pandemic Hero reach home (with a mask on, of course). If the hero comes up against a virus, destroy it with a sanitizer using the *player.disinfect(direction)* method, where direction is a number from 0 to 7, indicating a cell next to the hero’s location on the game field. 0 is the cell right above the hero, 1 is the top-right cell, and so on clockwise. Enjoy the disinfection! 

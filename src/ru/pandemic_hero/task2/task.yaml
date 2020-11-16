@@ -14,12 +14,12 @@ generatingFunc: >-
   this.addVirus([1, 3], 'down');
   this.addVirus([3, 6], 'left');
   this.addCheckingLogic('return this.player.position.x === 3 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
-shouldPutOnMask: false
 winButton:
   url: ./task3
-  text: Next level
+  text: Следующий уровень
 initialScript: |-
   import player
 
-  # Add your code here
-taskDescription: Дойди до дома и помой руки.
+  # Добавь код здесь
+taskDescription: >- 
+    Давай поможем нашему Герою ходить вверх и влево: методы *player.go_up(количество_шагов)* и *player.go_left(количество_шагов)* в этом помогут.  Дойди до дома и не забудь помыть руки!

@@ -1,0 +1,20 @@
+sceneType: console
+winButton:
+  url: ./task15
+  text: Наступний рівень
+initialScript: |
+  import console
+
+  # Додати код тут
+  
+taskDescription: >-
+  Якщо значення змінної "b" дорівнює 1, то привласни змінній "c" число 5, інакше — значення змінної "a".
+generatingFunc: >-
+  this.addConsoleVariable('a', Math.round(Math.random() * 100) / 100);
+  this.addConsoleVariable('b', Math.round(Math.random() * Math.floor(2)));
+  this.addConsoleVariable('c');
+  this.addCheckingLogic(`
+    if (this.getVariableValue("b") === 1 && this.getVariableValue("c") === 5) return null;
+    else if (this.getVariableValue("c") === this.getVariableValue("a")) return null;
+    else return "TASK_DONE_WRONG";
+  `);

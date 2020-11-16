@@ -15,12 +15,13 @@ generatingFunc: >-
   this.addVirus([6, 2], 'up');
   this.addVirus([6, 6], 'up');
   this.addCheckingLogic('return this.player.position.x === 0 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
-shouldPutOnMask: false
 winButton:
   url: ./task5
-  text: Next level
+  text: Следующий уровень
 initialScript: |-
   import player
 
-  # Add your code here
-taskDescription: 'Собери все маски и санитайзеры, дойди до дома и помой руки.'
+  # Добавь код здесь
+taskDescription: >- 
+    Герой наконец-то добрался до уровня с полезными предметами гигиены, которые очень пригодятся ему в дальнейшем! Собери их все и дойди до дома. Руки тоже нужно помыть (и не только на этом уровне, но и на всех дальнейших. Пользуйся этим правилом всегда в своей жизни!).
+

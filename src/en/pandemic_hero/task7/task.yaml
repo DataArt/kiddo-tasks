@@ -1,0 +1,26 @@
+sceneType: Pandemic
+generatingFunc: >-
+  this.setPlayerPosition(5, 5);
+  this.setGameField([
+      ['HO', 'CO', 'FE', 'RO', 'CO', 'FE', 'RO'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'CO', 'RO'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'FE', 'RO'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'CO', 'RO'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'CO', 'FE'],
+      ['CO', 'RO', 'RO', 'RO', 'RO', 'RO', 'FE'],
+      ['FE', 'FE', 'FE', 'RO', 'FE', 'FE', 'FE']
+    ]);
+  this.setWearingMaskAsRequired();
+  this.addVirus([6, 3], 'up');
+  this.addPerson([0, 2], 'right');
+  this.addPerson([3, 3], 'up');
+  this.addCheckingLogic('return this.player.position.x === 0 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
+winButton:
+  url: ./task8
+  text: Next level
+initialScript: |-
+  import player
+
+  # Add your code here
+taskDescription: >-
+  There are so many people in the street today. It is a good thing that they are all wearing masks ─ make sure you have your mask on as well. Remember to keep at least one cell distance from others. For that, use the *player.wait(move_count)* method as follows: the hero stops and waits for a person to pass by. Let’s help Pandemic Hero reach home.

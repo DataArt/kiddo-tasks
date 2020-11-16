@@ -10,17 +10,16 @@ generatingFunc: >-
       ['FE', 'FE', 'RO', 'RO', 'RO', 'RO', 'RO'],
       ['CO', 'RO', 'FE', 'RO', 'CO', 'RO', 'RO']
     ]);
+  this.setWearingMaskAsRequired();
   this.addVirus([3, 3], 'up');
   this.addVirus([6, 6], 'left');
   this.addCheckingLogic('return this.player.position.x === 0 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
-shouldPutOnMask: true
 winButton:
   url: ./task11
-  text: Next level
+  text: Следующий уровень
 initialScript: |-
   import player
 
-  # Add your code here
-taskDescription: >-
-  Надень маску, дойди до дома, уворачиваясь от вирусов, и помой руки. Вирус
-  можно уничтожить, используя функцию disinfect().
+  # Добавь код здесь
+taskDescription: >- 
+  Снова на дорожках вирусы! Давай поможем Герою, надев маску, дойти до дома. Если на пути встретится вирус, его можно уничтожить санитайзером с помощью метода *player.disinfect(direction)*, direction - направление, число от 0 до 7, обозначающее клетку вокруг игрока. 0 - клетка сверху от персонажа, 1 - клетка справа вверху от персонажа и так далее по часовой стрелке. Удачной дезинфекции!s

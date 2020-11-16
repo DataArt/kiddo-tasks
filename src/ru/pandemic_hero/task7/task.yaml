@@ -10,18 +10,17 @@ generatingFunc: >-
       ['CO', 'RO', 'RO', 'RO', 'RO', 'RO', 'FE'],
       ['FE', 'FE', 'FE', 'RO', 'FE', 'FE', 'FE']
     ]);
+  this.setWearingMaskAsRequired();
   this.addVirus([6, 3], 'up');
   this.addPerson([0, 2], 'right');
   this.addPerson([3, 3], 'up');
   this.addCheckingLogic('return this.player.position.x === 0 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
-shouldPutOnMask: true
 winButton:
   url: ./task8
-  text: Next level
+  text: Следующий уровень
 initialScript: |-
   import player
 
-  # Add your code here
+  # Добавь код здесь
 taskDescription: >-
-  Надень маску, дойди до дома, держа дистанцию в одну клетку от людей, и помой
-  руки.
+    На улице сегодня много людей. Хорошо, что все в масках (надень и ты!). Но нужно соблюдать дистанцию от них не меньше одной клетки. Тебе может помочь в этом метод *player.wait(количество_ходов)*: Герой остановится и подождет, пока человек не пройдет мимо. Давай поможем Герою дойти до дома.

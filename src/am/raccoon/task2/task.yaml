@@ -1,0 +1,27 @@
+sceneType: Raccoon
+generatingFunc: >-
+  this.setPlayerPosition(1, 0);
+  this.setGameField([
+      ['BU', 'RO', 'BU', 'BU', 'BU', 'BU'],
+      ['BU', 'RO', 'BU', 'BU', 'BU', 'BU'],
+      ['BU', 'RO', 'RO', 'RO', 'BU', 'BU'],
+      ['BU', 'BU', 'BU', 'RO', 'BU', 'BU'],
+      ['BU', 'BU', 'BU', 'RO', 'BU', 'BU'],
+      ['BU', 'BU', 'BU', 'RO', 'FI', 'BU'],
+    ]);
+  this.addCheckingLogic('return this.player.position.x === 4 && this.player.position.y === 5 ? null : "FINISH_NOT_REACHED"');
+winButton:
+  url: ./task3
+  text: Հաջորդ մակարդակը
+initialScript: |
+  import raccoon
+  
+  raccoon.go_down(2)
+
+  # Ավելացրեք կոդ այստեղ
+  
+taskDescription: >-
+  Ջրարջը կարող է շարժվել ոչ միայն դեպի աջ, այլ նաև այլ ուղղություններով: Օրինակ ներքև: Դրա համար նախատեսված է *raccoon.go_down(n)* մեթոդը, որտեղ n - քայլերի քանակն է:
+  Եթե պետք է կատարել մեկ քայլ , ապա անհրաժեշտ չէ դա նշել, կարելի է  գրել *raccoon.go_down()*: Նույնը վերաբերում է շարժման այլ մեթոդներին, օրինակ ՝ *raccoon.go_right()* - Ջրարջը մեկ վանդակով կտեղափոխի դեպի աջ:
+  Իսկ հիմա արի օգնենք Ջրարջին հասնել այս բարդ ճանապարհի վերջնագծին: Մենք քեզ համար արդեն գրել ենք շարժման առաջին հրամանը: Ամեն անգամ նոր հրաման գրելիս օգտագործիր նոր տող: 
+

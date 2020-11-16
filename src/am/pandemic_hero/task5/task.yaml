@@ -1,0 +1,23 @@
+sceneType: Pandemic
+generatingFunc: >-
+  this.setPlayerPosition(0, 1);
+  this.setGameField([
+      ['HO', 'FE', 'CO', 'CO', 'FE', 'L1', 'L2'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'L3', 'L4'],
+      ['RO', 'FE', 'CO', 'RO', 'RO', 'FE', 'FE'],
+      ['RO', 'FE', 'FE', 'FE', 'RO', 'FE', 'RO'],
+      ['RO', 'RO', 'CO', 'CO', 'RO', 'FE', 'FE'],
+      ['CO', 'RO', 'RO', 'RO', 'RO', 'SH', 'FE'],
+      ['FE', 'CO', 'FE', 'CO', 'CO', 'FE', 'FE']
+    ]);
+  this.setWearingMaskAsRequired();
+  this.addVirus([6, 3], 'left');
+  this.addCheckingLogic('return this.player.position.x === 0 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
+winButton:
+  url: ./task6
+  text: Հաջորդ մակարդակը
+initialScript: |-
+  import player
+
+  # Ավելացրեք կոդ այստեղ
+taskDescription: 'Իսկ հիմա մեր Հերոսը պետք է ապրանքներ գնի: Հիշի՛ր, որ առևտրի կենտրոնում սովորաբար շատ մարդիկ կան, այնպես որ ցանկալի է ընտրես փոքր խանութ: Մի մոռացիր նաև, որ մենք դիմակ ունենք, ուստի նախքան որևէ տեղ գնալը, մենք պետք է այն դնենք (մեթոդ *player.put_on_mask()*): Ապրանքներ գնելու համար մտեք այնտեղ և օգտագործիր *player.get_products()* մեթոդը: Այնուհետև ապրանքները տուն տար:'

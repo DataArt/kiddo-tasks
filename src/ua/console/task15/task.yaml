@@ -1,0 +1,25 @@
+sceneType: console
+winButton:
+  url: ./task16
+  text: Наступний рівень
+initialScript: |
+  import console
+
+  # Додати код тут
+  
+taskDescription: >-
+  Якщо значення змінної "a" більше значення змінної "b", то привласни змінній "c" залишок від ділення змінної "a" на змінну "b". Якщо отриманий залишок більше 0.5, то значення "c" помнож на 2.
+  Якщо значення змінної "a" менше або дорівнює значенню змінної "b", то привласни змінній "c" залишок від ділення значення змінної "b" на значення змінної "a".
+
+generatingFunc: >-
+  this.addConsoleVariable('a', Math.round(Math.random() * 30) / 10 + 1, true);
+  this.addConsoleVariable('b', Math.round(Math.random() * Math.floor(5)) + 1, true);
+  this.addConsoleVariable('c');
+  this.addCheckingLogic(`
+    if (this.getVariableValue("a") > this.getVariableValue("b")) {
+      if (this.getVariableValue("c") > 0.5 && this.getVariableValue("c") === this.getVariableValue("a") % this.getVariableValue("b")
+        || this.getVariableValue("c") <= 0.5 && this.getVariableValue("c") === (this.getVariableValue("a") % this.getVariableValue("b")) * 2 ) return null;
+    } else if (this.getVariableValue("c") === this.getVariableValue("b") % this.getVariableValue("a")) return null;
+    else return "TASK_DONE_WRONG";
+  `);
+

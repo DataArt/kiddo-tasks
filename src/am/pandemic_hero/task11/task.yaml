@@ -1,0 +1,22 @@
+sceneType: Pandemic
+generatingFunc: >-
+  this.setPlayerPosition(6, 0);
+  this.setGameField([
+      ['HO', 'FE', 'FE', 'CO', 'FE', 'FE', 'RO'],
+      ['RO', 'RO', 'RO', 'CO', 'RO', 'RO', 'RO'],
+      ['RO', 'RO', 'RO', 'RO', 'FE', 'RO', 'CO'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'FE'],
+      ['RO', 'RO', 'FE', 'RO', 'RO', 'RO', 'CO'],
+      ['FE', 'FE', 'RO', 'RO', 'RO', 'RO', 'RO'],
+      ['CO', 'RO', 'FE', 'RO', 'CO', 'RO', 'RO']
+    ]);
+  this.setWearingMaskAsRequired();
+  this.addVirus([[3, 2], [3, 6]], 'down');
+  this.addVirus([[5, 3], [0, 3]], 'left');
+  this.addVirus([0, 4], 'up');
+  this.addCheckingLogic('return this.player.position.x === 0 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
+initialScript: |-
+  import player
+
+  # Ավելացրեք կոդ այստեղ
+taskDescription: 'Վիրոջսները էլ ավելի՛ են շատանում: Բայց մեր Հերոսը նրանցից չի վախենում և կկարողանա տուն հասնել առողջ և անվնաս (հատկապես եթե նա հիշում է դիմակ կրելու անհրաժեշտության, ախտահնող միջոցի օգնությամբ վիրուսներին ոչնչացնելու և տուն հասնելուն պես ձեռքերը լվանալու մասին):'

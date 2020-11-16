@@ -1,0 +1,14 @@
+sceneType: console
+generatingFunc: >-
+  this.addConsoleVariable('x', 10);
+  this.addCheckingLogic('return this.consoleContent.includes("10") && this.getVariableValue("x") === 10 ? null : "TASK_DONE_WRONG"');
+winButton:
+  url: ./task2
+  text: Հաջորդ մակարդակը
+initialScript: |
+  import console
+
+  # Ավելացրեք կոդ այստեղ
+
+  
+taskDescription: 'Տպիր «x» փոփոխականի արժեքը կոնսոլի վրա:'

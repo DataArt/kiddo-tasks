@@ -1,0 +1,15 @@
+sceneType: console
+winButton:
+  url: ./task11
+  text: Հաջորդ մակարդակը
+initialScript: |
+  import console
+
+  # Ավելացրեք կոդ այստեղ
+  
+taskDescription: 'Եթե «a» փոփոխականի արժեքն ավելի մեծ է, քան «b» փոփոխականի արժեքը, ապա «c» փոփոխականի մեջ գրիր «a» փոփոխականի արժեքը, հակառակ դեպքում ՝ «b» փոփոխականի արժեքը:'
+generatingFunc: >-
+  this.addConsoleVariable('a', Math.floor(Math.random() * Math.floor(6)));
+  this.addConsoleVariable('b', Math.floor(Math.random() * Math.floor(6)));
+  this.addConsoleVariable('c');
+  this.addCheckingLogic(' if (this.getVariableValue("a") > this.getVariableValue("b") && this.getVariableValue("c") === this.getVariableValue("a")) return null; else if (this.getVariableValue("a") <= this.getVariableValue("b") && this.getVariableValue("c") === this.getVariableValue("b")) return null; else return "TASK_DONE_WRONG" ');

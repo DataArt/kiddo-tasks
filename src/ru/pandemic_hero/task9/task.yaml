@@ -14,12 +14,13 @@ generatingFunc: >-
   this.addSanitizers([2, 0]);
   this.addVirus([5, 6], 'left');
   this.addCheckingLogic('return this.player.position.x === 6 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
-shouldPutOnMask: false
 winButton:
   url: ./task10
-  text: Next level
+  text: Следующий уровень
 initialScript: |-
   import player
 
-  # Add your code here
-taskDescription: 'Собери все маски и санитайзеры, дойди до дома и помой руки.'
+  # Добавь код здесь
+taskDescription: >- 
+  Маски и санитайзеры закончились! Помоги Герою собрать новые и добраться до дома. Помни, что для прохождения уровня, нужно собрать все предметы.
+

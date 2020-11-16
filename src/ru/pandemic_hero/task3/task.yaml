@@ -13,12 +13,12 @@ generatingFunc: >-
   this.addVirus([1, 4], 'down');
   this.addVirus([3, 1], 'right');
   this.addCheckingLogic('return this.player.position.x === 1 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
-shouldPutOnMask: false
 winButton:
   url: ./task4
-  text: Next level
+  text: Следующий уровень
 initialScript: |-
   import player
 
-  # Add your code here
-taskDescription: Дойди до дома и помой руки.
+  # Добавь код здесь
+taskDescription: >- 
+    Осторожно, на дорожке появился вирус! Будь осторожен, не дай ему себя поймать! Используя изученные ранее методы, помоги Герою дойти до дома (и помыть руки!).

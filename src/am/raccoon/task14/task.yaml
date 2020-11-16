@@ -1,0 +1,26 @@
+sceneType: Raccoon
+generatingFunc: >-
+  this.setPlayerPosition(4, 0);
+  this.setGameField([
+      ['TR', 'TR', 'TR', 'TR', 'RO', 'RO', 'TR'],
+      ['TR', 'TR', 'ST', 'TR', 'ST', 'RO', 'TR'],
+      ['TR', 'TR', 'RO', 'RO', 'RO', 'RO', 'TR'],
+      ['TR', 'TR', 'RO', 'TR', 'RO', 'TR', 'TR'],
+      ['TR', 'ST', 'RO', 'RO', 'RO', 'TR', 'TR'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],
+      ['FI', 'RO', 'RO', 'TR', 'TR', 'TR', 'TR']
+    ]);
+  this.addCookies([3, 5], [2, 5], [1, 5]);
+  this.addMonster([0, 5], 'RIGHT');
+  this.addCustomTile('ST', 'https://i.imgur.com/ZKCX48X.png');
+  this.addCustomTile('TR', 'https://i.imgur.com/ELvTBrD.png');
+  this.addCheckingLogic('return this.player.position.x === 0 && this.player.position.y === 6 ? null : "FINISH_NOT_REACHED"');
+winButton:
+  url: ./task15
+  text: Հաջորդ մակարդակը
+initialScript: |
+  import raccoon
+
+  # Ավելացրեք կոդ այստեղ
+  
+taskDescription: 'Հրեշը պաշտպանում է բլիթները, բայց նա չգիտի, թե որտեղից կարող է հայտնվել Ջրարջը: Ընտրիր ճիշտ պահը և հավաքիր բոլոր բլիթները Ջրարջի հետ միսաին, և հասիր դրոշին:'

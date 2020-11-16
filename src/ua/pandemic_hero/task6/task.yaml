@@ -1,0 +1,26 @@
+sceneType: Pandemic
+generatingFunc: >-
+  this.setPlayerPosition(1, 7);
+  this.setGameField([
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],
+      ['FE', 'FE', 'CO', 'FE', 'CO', 'FE', 'FE', 'CO'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'SH'],
+      ['RO', 'FE', 'CO', 'FE', 'CO', 'FE', 'RO', 'FE'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'FE'],
+      ['CO', 'RO', 'RO', 'L1', 'L2', 'CO', 'FE', 'CO'],
+      ['FE', 'RO', 'FE', 'L3', 'L4', 'FE', 'CO', 'FE'],
+      ['HO', 'RO', 'FE', 'RO', 'RO', 'RO', 'RO', 'RO']
+    ]);
+  this.setWearingMaskAsRequired();
+  this.addVirus([0, 0], 'right');
+  this.addVirus([3, 7], 'right');
+  this.addCheckingLogic('return this.player.position.x === 0 && this.player.position.y === 7 ? null : "HOME_NOT_REACHED"');
+winButton:
+  url: ./task7
+  text: Наступний рівень
+initialScript: |-
+  import player
+
+  # Додати код тут
+taskDescription: >-
+  Пам'ятаєш, що ми казали про великий і маленький магазини? Давай закріпимо ці знання. Допоможи Герою сходити до магазину (в масці!) за продуктами та повернутися з ними додому.

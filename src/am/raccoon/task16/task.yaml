@@ -1,0 +1,27 @@
+sceneType: Raccoon
+generatingFunc: >-
+  this.setPlayerPosition(6, 6);
+  this.setGameField([
+      ['TR', 'TR', 'TR', 'RO', 'RO', 'GR', 'TR'],
+      ['TR', 'TR', 'ST', 'RO', 'ST', 'GR', 'TR'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],
+      ['RO', 'TR', 'RO', 'RO', 'GR', 'TR', 'TR'],
+      ['RO', 'ST', 'RO', 'RO', 'RO', 'RO', 'TR'],
+      ['RO', 'FI', 'RO', 'RO', 'BU', 'RO', 'RO'],
+      ['GR', 'GR', 'TR', 'RO', 'BU', 'RO', 'RO']
+    ]);
+  this.addCookies([4, 4], [3, 1]);
+  this.addMonster([3, 0], 'DOWN');
+  this.addMonster([0, 2], 'RIGHT');
+  this.addCustomTile('ST', 'https://i.imgur.com/ZKCX48X.png');
+  this.addCustomTile('TR', 'https://i.imgur.com/ELvTBrD.png');
+  this.addCheckingLogic('return this.player.position.x === 1 && this.player.position.y === 5 ? null : "FINISH_NOT_REACHED"');
+winButton:
+  url: ./task17
+  text: Հաջորդ մակարդակը
+initialScript: |
+  import raccoon
+
+  # Ավելացրեք կոդ այստեղ
+  
+taskDescription: 'Ուշադրությու՛ն անտառում արդեն 2 հրեշ կա: Բայց վախից Ջրարջը չպետք է մոռանա բլիթների մասին և պետք է հասնի դրոշին:'

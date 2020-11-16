@@ -1,0 +1,27 @@
+sceneType: Pandemic
+generatingFunc: >-
+  this.setPlayerPosition(3, 0);
+  this.setGameField([
+      ['FE', 'CO', 'FE', 'RO', 'RO', 'RO', 'RO', 'RO'],
+      ['CO', 'FE', 'CO', 'RO', 'RO', 'RO', 'RO', 'FE'],
+      ['FE', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],
+      ['L1', 'L2', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],
+      ['L3', 'L4', 'RO', 'RO', 'CO', 'RO', 'RO', 'RO'],
+      ['CO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],
+      ['FE', 'RO', 'RO', 'RO', 'CO', 'RO', 'RO', 'HO'],
+      ['CO', 'RO', 'RO', 'RO', 'FE', 'RO', 'RO', 'FE']
+    ]);
+  this.setWearingMaskAsRequired();
+  this.addPerson([7, 2], 'right');
+  this.addPerson([3, 5], 'up');
+  this.addPerson([5, 7], 'down');
+  this.addCheckingLogic('return this.player.position.x === 7 && this.player.position.y === 6 ? null : "HOME_NOT_REACHED"');
+winButton:
+  url: ./task9
+  text: Հաջորդ մակարդակը
+initialScript: |-
+  import player
+
+  # Ավելացրեք կոդ այստեղ
+taskDescription: >-
+  Մարդիկ էլ ավելի շա՛տ են: Դիմակ կրիր, պահպանիր հեռավորություը (անհրաժեշտության դեպքում սպասիր՝ օգտագործելով նախկինում սովորած *player.wait(քայլերի քանակը)* մեթոդը), շրջանցիր առևտրի կենտրոնը և տուն հասիր: 

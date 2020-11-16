@@ -1,0 +1,24 @@
+sceneType: Pandemic
+generatingFunc: >-
+  this.setPlayerPosition(0, 1);
+  this.setGameField([
+      ['HO', 'FE', 'CO', 'CO', 'FE', 'L1', 'L2'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'L3', 'L4'],
+      ['RO', 'FE', 'CO', 'RO', 'RO', 'FE', 'FE'],
+      ['RO', 'FE', 'FE', 'FE', 'RO', 'FE', 'RO'],
+      ['RO', 'RO', 'CO', 'CO', 'RO', 'FE', 'FE'],
+      ['CO', 'RO', 'RO', 'RO', 'RO', 'SH', 'FE'],
+      ['FE', 'CO', 'FE', 'CO', 'CO', 'FE', 'FE']
+    ]);
+  this.setWearingMaskAsRequired();
+  this.addVirus([6, 3], 'left');
+  this.addCheckingLogic('return this.player.position.x === 0 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
+winButton:
+  url: ./task6
+  text: Next level
+initialScript: |-
+  import player
+
+  # Add your code here
+taskDescription: >-
+  Now Pandemic Hero is about to buy some groceries. Remember that big shopping malls are usually crowded, so choose a small shop. Also do not forget about the mask ─ put it on before you set off (use the *player.put_on_mask()* method). To buy the groceries, enter the chosen shop and use the *player.get_products()* method and then carry the purchases home.

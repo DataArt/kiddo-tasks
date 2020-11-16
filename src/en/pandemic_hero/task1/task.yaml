@@ -1,0 +1,32 @@
+sceneType: Pandemic
+generatingFunc: >-
+  this.setPlayerPosition(0, 0);
+  this.setGameField([
+      ['RO', 'CO', 'FE', 'CO', 'FE', 'RO', 'RO'],
+      ['RO', 'RO', 'RO', 'RO', 'FE', 'FE', 'RO'],
+      ['FE', 'FE', 'FE', 'RO', 'RO', 'FE', 'RO'],
+      ['RO', 'RO', 'CO', 'CO', 'RO', 'FE', 'CO'],
+      ['RO', 'RO', 'RO', 'FE', 'RO', 'RO', 'FE'],
+      ['RO', 'RO', 'RO', 'CO', 'FE', 'RO', 'RO'],
+      ['RO', 'RO', 'RO', 'RO', 'FE', 'CO', 'HO']
+    ]);
+  this.addVirus([5, 0], 'right');
+  this.addVirus([0, 3], 'right');
+  this.addVirus([2, 4], 'left');
+  this.addVirus([1, 5], 'right');
+  this.addVirus([2, 6], 'right');
+  this.addCheckingLogic('return this.player.position.x === 6 && this.player.position.y === 6 ? null : "HOME_NOT_REACHED"');
+winButton:
+  url: ./task2.html
+  text: Next level
+initialScript: |-
+  import player
+
+  # Add your code here
+taskDescription: >-
+  We think you have already learned to live with the pandemic. So, let’s remember the “survival code” and walk through the town observing all safety precautions. Be careful not to contract the virus. To avoid it, wash your hands frequently, use a hand sanitizer, wear a mask in public places, and keep distance from others. To pass the game, you need to learn how to control Pandemic Hero. At this level, use the following methods: 
+  *player.go_right(2)* ─ moves the hero two cells to the right.
+  *player.go_down(2)* ─ moves the hero two cells down.
+  To move the hero only one cell in any direction, do not specify the argument, for example: *player.go_right()*.
+  To wash the hands, use the *player.wash_hands()* method. Now, help Pandemic Hero reach home and wash their hands. Try and see that you can make it!
+

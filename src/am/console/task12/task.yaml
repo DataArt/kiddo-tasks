@@ -1,0 +1,19 @@
+sceneType: console
+winButton:
+  url: ./task13
+  text: Հաջորդ մակարդակը
+initialScript: |
+  import console
+
+  # Ավելացրեք կոդ այստեղ
+  
+taskDescription: 'Եթե 2-ով բազմապատկած «b» փոփոխականի արժեքը մեծ է կամ հավասար է «a» փոփոխականի արժեքին, ապա «c» փոփոխականին նշանակել «a» և «b» փոփոխականների հանրագումարը, հակառակ դեպքում `դրանց արտադրյալը:'
+generatingFunc: >-
+  this.addConsoleVariable('a', Math.floor(Math.random() * Math.floor(10)));
+  this.addConsoleVariable('b', Math.floor(Math.random() * Math.floor(5)));
+  this.addConsoleVariable('c');
+  this.addCheckingLogic(`
+    if (this.getVariableValue("b") * 2 >= this.getVariableValue("a") && this.getVariableValue("c") === this.getVariableValue("a") + this.getVariableValue("b")) return null;
+    else if (this.getVariableValue("c") === this.getVariableValue("a") * this.getVariableValue("b")) return null;
+    else return "TASK_DONE_WRONG";
+  `);

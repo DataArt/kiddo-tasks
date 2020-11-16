@@ -1,0 +1,24 @@
+sceneType: Pandemic
+generatingFunc: >-
+  this.setPlayerPosition(0, 1);
+  this.setGameField([
+      ['HO', 'FE', 'CO', 'CO', 'FE', 'L1', 'L2'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'L3', 'L4'],
+      ['RO', 'FE', 'CO', 'RO', 'RO', 'FE', 'FE'],
+      ['RO', 'FE', 'FE', 'FE', 'RO', 'FE', 'RO'],
+      ['RO', 'RO', 'CO', 'CO', 'RO', 'FE', 'FE'],
+      ['CO', 'RO', 'RO', 'RO', 'RO', 'SH', 'FE'],
+      ['FE', 'CO', 'FE', 'CO', 'CO', 'FE', 'FE']
+    ]);
+  this.setWearingMaskAsRequired();
+  this.addVirus([6, 3], 'left');
+  this.addCheckingLogic('return this.player.position.x === 0 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
+winButton:
+  url: ./task6
+  text: Наступний рівень
+initialScript: |-
+  import player
+
+  # Додати код тут
+taskDescription: >-
+  А зараз нашому Герою потрібно купити продукти. Пам'ятай, що в торговельному центрі зазвичай багато людей, тому вибери маленький магазин. Також не забудь, що в нас є маска, тому перед тим як кудись іти, потрібно її надіти (метод *player.put_on_mask()*). Щоб купити продукти, зайди до магазину та використовуй метод *player.get_products()*. Потім віднеси продукти додому.

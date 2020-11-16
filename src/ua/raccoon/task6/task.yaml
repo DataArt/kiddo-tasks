@@ -1,0 +1,21 @@
+sceneType: Raccoon
+generatingFunc: >-
+  this.setPlayerPosition(1, 0);
+  this.setGameField([
+    ['BU', 'RO', 'BU', 'BU', 'BU', 'BU'],
+    ['BU', 'RO', 'GR', 'RO', 'RO', 'RO'],
+    ['BU', 'RO', 'RO', 'RO', 'GR', 'RO'],
+    ['BU', 'RO', 'RO', 'GR', 'GR', 'FI'],
+    ['BU', 'GR', 'GR', 'GR', 'OF', 'OF'],
+    ['BU', 'GR', 'GR', 'GR', 'OF', 'GR']
+  ]);
+  this.addCheckingLogic('return this.player.position.x === 5 && this.player.position.y === 3 ? null : "FINISH_NOT_REACHED"');
+winButton:
+  url: ./task7
+  text: Наступний рівень
+initialScript: |
+  import raccoon
+
+  # Додати код тут
+  
+taskDescription: Ти познайомився з основними методами руху Єнота й надалі користуватимешся ними самостійно! Для початку доведи Єнота до прапора. Якщо забудеш, як пишуться команди і для чого вони потрібні, виклич Допомогу (кнопка "?" на панелі над редактором коду).

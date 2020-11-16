@@ -1,0 +1,24 @@
+sceneType: console
+winButton:
+  url: ./task20
+  text: Наступний рівень
+initialScript: |
+  import console
+
+  # Додати код тут
+  
+taskDescription: >-
+  Склади "n" раз суму змінних "x" і "y", помножену на 2, та запиши отримане значення у змінну "z". Виведи значення змінної "z" у консоль.
+
+generatingFunc: >-
+  this.addConsoleVariable('x', Math.round(Math.random() * Math.floor(10)), true);
+  this.addConsoleVariable('y', Math.round(Math.random() * Math.floor(10)), true);
+  this.addConsoleVariable('n', Math.round(Math.random() * Math.floor(4)), true);
+  this.addConsoleVariable('z');
+  this.addCheckingLogic(`
+    if (this.consoleContent.includes(this.getVariableValue("z").toString())) {
+      return null;
+    } else {
+      return "TASK_DONE_WRONG";
+    }
+  `)

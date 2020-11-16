@@ -11,19 +11,17 @@ generatingFunc: >-
       ['FE', 'RO', 'RO', 'RO', 'CO', 'RO', 'RO', 'HO'],
       ['CO', 'RO', 'RO', 'RO', 'FE', 'RO', 'RO', 'FE']
     ]);
-  this.addVirus();
+  this.setWearingMaskAsRequired();
   this.addPerson([7, 2], 'right');
   this.addPerson([3, 5], 'up');
   this.addPerson([5, 7], 'down');
   this.addCheckingLogic('return this.player.position.x === 7 && this.player.position.y === 6 ? null : "HOME_NOT_REACHED"');
-shouldPutOnMask: true
 winButton:
   url: ./task9
-  text: Next level
+  text: Следующий уровень
 initialScript: |-
   import player
 
-  # Add your code here
+  # Добавь код здесь
 taskDescription: >-
-  Надень маску, дойди до дома, держа дистанцию в одну клетку от людей, и помой
-  руки.
+  Людей стало еще больше! Надень маску, соблюдай дистанцию (жди, если нужно, с помощью изученного ранее метода *player.wait(количество_ходов)*), обходи стороной торговый центр и дойди до дома.

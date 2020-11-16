@@ -1,0 +1,21 @@
+sceneType: Raccoon
+generatingFunc: >-
+  this.setPlayerPosition(1, 0);
+  this.setGameField([
+    ['BU', 'RO', 'BU', 'BU', 'BU', 'BU'],
+    ['BU', 'RO', 'GR', 'RO', 'RO', 'RO'],
+    ['BU', 'RO', 'RO', 'RO', 'GR', 'RO'],
+    ['BU', 'RO', 'RO', 'GR', 'GR', 'FI'],
+    ['BU', 'GR', 'GR', 'GR', 'OF', 'OF'],
+    ['BU', 'GR', 'GR', 'GR', 'OF', 'GR']
+  ]);
+  this.addCheckingLogic('return this.player.position.x === 5 && this.player.position.y === 3 ? null : "FINISH_NOT_REACHED"');
+winButton:
+  url: ./task7
+  text: Հաջորդ մակարդակը
+initialScript: |
+  import raccoon
+
+  # Ավելացրեք կոդ այստեղ
+  
+taskDescription: 'Դու ծանոթացար Ջրարջի շարժման  հիմնական մեթոդներին, և այժմ պետք է դրանք օգտագործես ինքնուրույն: Նախևառաջ, Ջրարջին օգնիր հասնել դրոշին: Եթե մոռանաս, թե ինչպես են գրվում հրամանները և ինչի համար են դրանք, կանչիր Օգնություն (կոդի խմբագրի վերևում գտնվող վահանակի «?» Կոճակը):'

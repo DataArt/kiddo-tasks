@@ -1,0 +1,24 @@
+sceneType: Raccoon
+generatingFunc: >-
+    const gameField = [ ['RO', 'RO', 'GR', 'GR', 'GR', 'FI'],
+                        ['RO', 'RO', 'RO', 'GR', 'GR', 'RO'],
+                        ['RO', 'GR', 'RO', 'RO', 'GR', 'RO'],
+                        ['RO', 'GR', 'GR', 'RO', 'RO', 'RO'],
+                        ['RO', 'GR', 'GR', 'GR', 'GR', 'RO'],
+                        ['RO', 'RO', 'RO', 'RO', 'RO', 'RO']
+                       ];
+    this.setGameField(gameField);
+    this.setPlayerPosition(0, 0);
+    this.addTurrets([0, 4]);
+    this.addMonster([5, 1], 'DOWN');
+    this.addMonster([2, 2], 'RIGHT');
+    this.addCheckingLogic('return this.player.position.x === 5 && this.player.position.y === 0 ? null : `FINISH_NOT_REACHED`');
+winButton:
+  url: ./task28
+  text: Հաջորդ մակարդակը
+initialScript: |
+  import raccoon
+
+  # Ավելացրեք կոդ այստեղ
+  
+taskDescription: 'Դրոշին հասնելու ճանապարհին կրկին կան հրեշներ, որոնցից մեկին հնարավոր չէ շրջանցել: Այստեղ քեզ կօգնի թնդանոթը (ինքնակառավարվող, բազմա- լիցքավորվող): Վերցրու այն, տեղադրիր (*raccoon.place_turret()*) հրեշի երթուղու կողքին և սպասիր նրա պայթյունին: Ուղին ազատ է. Հասիր վերջնագծին:'

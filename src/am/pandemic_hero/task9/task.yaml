@@ -1,0 +1,24 @@
+sceneType: Pandemic
+generatingFunc: >-
+  this.setPlayerPosition(6, 1);
+  this.setGameField([
+      ['CO', 'FE', 'RO', 'FE', 'FE', 'CO', 'HO'],
+      ['FE', 'CO', 'RO', 'RO', 'CO', 'FE', 'RO'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],
+      ['RO', 'CO', 'FE', 'CO', 'RO', 'FE', 'CO'],
+      ['RO', 'RO', 'FE', 'FE', 'RO', 'CO', 'FE'],
+      ['FE', 'RO', 'RO', 'RO', 'RO', 'FE', 'CO'],
+      ['FE', 'CO', 'FE', 'CO', 'FE', 'RO', 'RO']
+    ]);
+  this.addMasks([4, 2], [4, 5], [0, 2]);
+  this.addSanitizers([2, 0]);
+  this.addVirus([5, 6], 'left');
+  this.addCheckingLogic('return this.player.position.x === 6 && this.player.position.y === 0 ? null : "HOME_NOT_REACHED"');
+winButton:
+  url: ./task10
+  text: Հաջորդ մակարդակը
+initialScript: |-
+  import player
+
+  # Ավելացրեք կոդ այստեղ
+taskDescription: 'Դիմակները և ախտահանող միջոցները վերջացե՛լ են: Օգնիր Հերոսին նորից դրանք հավաքել և տուն հասնել: Հիշիր, որ մակարդակն ավարտելու համար հարկավոր է հավաքել բոլոր իրերը:'

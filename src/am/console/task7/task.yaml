@@ -1,0 +1,15 @@
+sceneType: console
+winButton:
+  url: ./task8
+  text: Հաջորդ մակարդակը
+initialScript: |
+  import console
+
+  # Ավելացրեք կոդ այստեղ
+  
+taskDescription: '«a» փոփոխականի արժեքը բաժանիր «b» փոփոխականի արժեքի վրա և գրիր բաժանման մնացորդը «c»  փոփոխականի մեջ:'
+generatingFunc: >-
+  this.addConsoleVariable('a', Math.floor(Math.random() * Math.floor(8)));
+  this.addConsoleVariable('b', Math.floor(Math.random() * Math.floor(6)));
+  this.addConsoleVariable('c');
+  this.addCheckingLogic(' return this.getVariableValue("c") === this.getVariableValue("a") % this.getVariableValue("b") ? null : "TASK_DONE_WRONG" ');

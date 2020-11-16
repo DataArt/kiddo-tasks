@@ -1,0 +1,16 @@
+sceneType: console
+winButton:
+  url: ./task5
+  text: Наступний рівень
+initialScript: |
+  import console
+
+  # Додати код тут
+  
+taskDescription: Запиши різницю значень змінних "a" і "b" у змінну "c".
+generatingFunc: >-
+  this.addConsoleVariable('a', Math.floor(Math.random() * Math.floor(11)));
+  this.addConsoleVariable('b', Math.floor(Math.random() * Math.floor(6)));
+  this.addConsoleVariable('c');
+  this.addCheckingLogic('return this.getVariableValue("c") === this.getVariableValue("a") - this.getVariableValue("b") ? null : "TASK_DONE_WRONG" ');
+

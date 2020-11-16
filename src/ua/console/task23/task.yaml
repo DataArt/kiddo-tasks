@@ -1,0 +1,30 @@
+sceneType: console
+# winButton:
+#   url: ./task24
+#   text: Наступний рівень
+initialScript: |
+  import console
+
+  # Додати код тут
+  
+taskDescription: >-
+  Виконай "n" ітерацій, на кожному парному кроці якої додавай до змінної "c" число 3, а на кожному непарному кроці — множ значення "c" на 2.
+  Потім виведи значення змінної "c" у консоль.
+
+
+generatingFunc: >-
+  this.addConsoleVariable('n', Math.floor(Math.random() * Math.floor(9) + 1), true);
+  this.addConsoleVariable('c', 0);
+
+  this.addCheckingLogic(`
+    let sum = 0;
+    for (let i = 0; i < this.getVariableValue("n"); i++) {
+      sum = i % 2 === 0 ? sum + 3 : sum * 2;
+    }
+
+    if (this.consoleContent.includes(sum.toString())) {
+      return null;
+    } else {
+      return "TASK_DONE_WRONG";
+    }
+  `)

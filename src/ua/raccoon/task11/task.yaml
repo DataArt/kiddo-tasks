@@ -1,0 +1,29 @@
+sceneType: Raccoon
+generatingFunc: >-
+  this.setPlayerPosition(5, 10  );
+  this.setGameField([
+      ['GR', 'GR', 'GR', 'GR', 'GR', 'FI', 'GR', 'GR', 'GR', 'GR', 'GR'],
+      ['GR', 'GR', 'GR', 'GR', 'RO', 'RO', 'RO', 'GR', 'GR', 'GR', 'GR'],
+      ['GR', 'GR', 'GR', 'GR', 'GR', 'RO', 'GR', 'GR', 'GR', 'GR', 'GR'],
+      ['GR', 'GR', 'GR', 'RO', 'RO', 'RO', 'RO', 'RO', 'GR', 'GR', 'GR'],
+      ['GR', 'GR', 'GR', 'GR', 'GR', 'RO', 'GR', 'GR', 'GR', 'GR', 'GR'],
+      ['GR', 'GR', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'GR', 'GR'],
+      ['GR', 'GR', 'GR', 'GR', 'GR', 'RO', 'GR', 'GR', 'GR', 'GR', 'GR'],
+      ['GR', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'GR'],
+      ['GR', 'GR', 'GR', 'GR', 'GR', 'RO', 'GR', 'GR', 'GR', 'GR', 'GR'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],
+      ['GR', 'GR', 'GR', 'GR', 'GR', 'RO', 'GR', 'GR', 'GR', 'GR', 'GR'],
+    ]);
+  this.addCookies([0, 9], [10, 9], [1, 7], [9, 7], [2, 5], [8, 5], [3, 3], [7, 3], [4, 1], [6, 1]);
+  this.addCustomTile('ST', 'https://i.imgur.com/ZKCX48X.png');
+  this.addCustomTile('GR', 'https://i.imgur.com/ELvTBrD.png');
+  this.addCheckingLogic('return this.player.position.x === 5 && this.player.position.y === 0 ? null : "FINISH_NOT_REACHED"');
+winButton:
+  url: ./task12
+  text: Наступний рівень
+initialScript: |
+  import raccoon
+
+  # Додати код тут
+  
+taskDescription: Отакої! Тут втомишся писати код, щоб довести Єнота до прапора. Невже не знайдеться чогось на допомогу? Звісно! Раніше послідовність команд завжди виконувалася по порядку суворо згори донизу. А тепер треба, щоб програма ухвалювала рішення і виконувала різні дії залежно від ситуації. Цього можна досягти за допомогою оператора while. Детальніше про нього можна прочитати <a href="https://pythonworld.ru/osnovy/cikly-for-i-while-operatory-break-i-continue-volshebnoe-slovo-else.html" target="_blank" rel="nofollow" class="i18n-link">тут</a>.
