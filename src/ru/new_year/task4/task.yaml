@@ -1,0 +1,27 @@
+sceneType: Raccoon
+generatingFunc: >-
+  this.setPlayerPosition(3, 3);
+  this.setGameField([
+      ['FI', 'RO', 'RO', 'RO', 'RO', 'RO', 'FI'],
+      ['RO', 'BU', 'BU', 'RO', 'GR', 'GR', 'RO'],
+      ['RO', 'BU', 'BU', 'RO', 'GR', 'GR', 'RO'],
+      ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],
+      ['RO', 'GR', 'GR', 'RO', 'BU', 'BU', 'RO'],
+      ['RO', 'GR', 'GR', 'RO', 'BU', 'BU', 'RO'],
+      ['FI', 'RO', 'RO', 'RO', 'RO', 'RO', 'FI'],
+    ]);
+  this.addCheckingLogic('return (this.player.position.x === 0 && this.player.position.y === 0)  || (this.player.position.x === 6 && this.player.position.y === 0)  || (this.player.position.x === 0 && this.player.position.y === 6)  || (this.player.position.x === 6 && this.player.position.y === 6) ? null : "FINISH_NOT_REACHED"');
+winButton:
+  url: ./task5
+  text: Следующий уровень
+initialScript: |
+  import raccoon
+
+  # methods: 
+  #raccoon.go_right()
+  #raccoon.go_left()
+  #raccoon.go_down()
+  #raccoon.go_up()
+  
+taskDescription: >-
+    А теперь давай потренируемся ходить Енотом в разные стороны с помощью изученных команд (методов)! В этом уровне, как и часто в жизни, выходов и правильных решений может быть много. Поэтому здесь для успеха Еноту нужно будет дойти до любого из флагов.
