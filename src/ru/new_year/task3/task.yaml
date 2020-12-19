@@ -1,28 +1,19 @@
-sceneType: Raccoon
-generatingFunc: >-
-  this.setPlayerPosition(1, 4);
-  this.setGameField([
-      ['RO', 'RO', 'RO', 'RO', 'RO'],
-      ['RO', 'BU', 'BU', 'BU', 'RO'],
-      ['RO', 'BU', 'GR', 'BU', 'RO'],
-      ['RO', 'BU', 'BU', 'BU', 'RO'],
-      ['RO', 'RO', 'BU', 'FI', 'RO'],
-      
-    ]);
-  this.addCheckingLogic('return this.player.position.x === 3 && this.player.position.y === 4 ? null : "FINISH_NOT_REACHED"');
-winButton:
-  url: ./task4
-  text: Следующий уровень
-initialScript: |
-  import raccoon
-
-  #raccoon.go_left()
-  #raccoon.go_up()
-  #raccoon.go_right()
-  #raccoon.go_down()
-  #raccoon.go_left()
-  
-taskDescription: >-
-    Для того, чтобы Енот мог ходить во все 4 стороны, давай изучим еще 2 метода: *raccoon.go_left(n)* для ходьбы влево и *raccoon.go_up(n)* для ходьбы вверх, где n - количество шагов.
-    В этом уровне Енота и финиш разделяет куст, который так просто не перепрыгнуть, поэтому ему придется прогуляться, чтобы найти верную дорогу. Давайте ему в этом поможем!
-    В редакторе уже написаны команды, они закомментированы (перед каждой стоит знак #, и программа ее не исполняет). Убери знак # перед каждой командой и передай (где это нужно) в методы движения необходимое количество шагов
+sceneType: raccoon
+taskDescription: 'обойди вокруг елочки, сразись с монстром и дойди до флага'
+generatingFunc: |2-
+        this.setPlayerPosition(3, 7);
+        const gameField = [
+          ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],
+          ['RO', 'RO', 'RO', 'RO', 'GR', 'RO', 'RO', 'RO', 'RO'],
+          ['RO', 'RO', 'RO', 'GR', 'GR', 'GR', 'RO', 'RO', 'RO'],
+          ['RO', 'RO', 'GR', 'GR', 'GR', 'GR', 'GR', 'RO', 'RO'],
+          ['RO', 'RO', 'RO', 'GR', 'GR', 'GR', 'RO', 'RO', 'RO'],
+          ['RO', 'RO', 'GR', 'GR', 'GR', 'GR', 'GR', 'RO', 'RO'],
+          ['RO', 'GR', 'GR', 'GR', 'GR', 'GR', 'GR', 'GR', 'RO'],
+          ['RO', 'RO', 'RO', 'RO', 'GR', 'FI', 'RO', 'RO', 'RO'],
+        ];
+        this.setGameField(gameField);
+        this.addMonster([[1, 0], [2, 0]], 'RIGHT');
+        this.addMonster([[5, 0], [6, 0]], 'RIGHT');
+        this.addTurrets([2, 4]);
+        this.addCheckingLogic('return this.player.position.x === 5 && this.player.position.y === 7 ? null : "FINISH_NOT_REACHED"');

@@ -1,27 +1,12 @@
-sceneType: Raccoon
-generatingFunc: >-
-  this.setPlayerPosition(3, 3);
-  this.setGameField([
-      ['FI', 'RO', 'RO', 'RO', 'RO', 'RO', 'FI'],
-      ['RO', 'BU', 'BU', 'RO', 'GR', 'GR', 'RO'],
-      ['RO', 'BU', 'BU', 'RO', 'GR', 'GR', 'RO'],
-      ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],
-      ['RO', 'GR', 'GR', 'RO', 'BU', 'BU', 'RO'],
-      ['RO', 'GR', 'GR', 'RO', 'BU', 'BU', 'RO'],
-      ['FI', 'RO', 'RO', 'RO', 'RO', 'RO', 'FI'],
-    ]);
-  this.addCheckingLogic('return (this.player.position.x === 0 && this.player.position.y === 0)  || (this.player.position.x === 6 && this.player.position.y === 0)  || (this.player.position.x === 0 && this.player.position.y === 6)  || (this.player.position.x === 6 && this.player.position.y === 6) ? null : "FINISH_NOT_REACHED"');
-winButton:
-  url: ./task5
-  text: Следующий уровень
-initialScript: |
-  import raccoon
-
-  # methods: 
-  #raccoon.go_right()
-  #raccoon.go_left()
-  #raccoon.go_down()
-  #raccoon.go_up()
-  
+sceneType: console
 taskDescription: >-
-    А теперь давай потренируемся ходить Енотом в разные стороны с помощью изученных команд (методов)! В этом уровне, как и часто в жизни, выходов и правильных решений может быть много. Поэтому здесь для успеха Еноту нужно будет дойти до любого из флагов.
+  Выведите на печать число дней в году, номер которого находится в переменной "a"
+generatingFunc: >2-
+  function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  this.addConsoleVariable('y', getRandomInt(100,2100));
+  this.addConsoleVariable('d');
+  this.addCheckingLogic('return  this.getVariableValue("d") === ((this.getVariableValue("y") % 4 !== 0 ||  (this.getVariableValue("y") % 100 == 0 &&this.getVariableValue("y") % 400 != 0))? 365 : 366)? null : "TASK_DONE_WRONG"');
