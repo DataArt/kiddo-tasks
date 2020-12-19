@@ -1,26 +1,31 @@
-sceneType: Raccoon
-generatingFunc: >-
-  this.setPlayerPosition(1, 0);
-  this.setGameField([
-      ['BU', 'RO', 'BU', 'BU', 'BU', 'BU'],
-      ['BU', 'RO', 'BU', 'BU', 'BU', 'BU'],
-      ['BU', 'RO', 'RO', 'RO', 'BU', 'BU'],
-      ['BU', 'BU', 'BU', 'RO', 'BU', 'BU'],
-      ['BU', 'BU', 'BU', 'RO', 'BU', 'BU'],
-      ['BU', 'BU', 'BU', 'RO', 'FI', 'BU'],
-    ]);
-  this.addCheckingLogic('return this.player.position.x === 4 && this.player.position.y === 5 ? null : "FINISH_NOT_REACHED"');
-winButton:
-  url: ./task3
-  text: Следующий уровень
-initialScript: |
-  import raccoon
-  
-  raccoon.go_down(2)
-
-  # Добавь код здесь
-  
+sceneType: raccoon
 taskDescription: >-
-    Енот может ходить не только вправо, но и в другие стороны. Например вниз. Для этого у него есть метод *raccoon.go_down(n)*, где n - количество шагов.
-    Если нужно сделать один шаг, указывать это не обязательно, можно написать *raccoon.go_down()*. Это же относится и к другим методам движения, например *raccoon.go_right()* - Енот сдвинется вправо на одну клетку.
-    А теперь давай поможем Еноту по этой замысловатой дорожке добраться до финиша! Первую команду для движения мы уже написали за тебя. Все дальнейшие команды пиши каждый раз на новой строчке.
+  Проведи енота через еловый лес подарку, обрати внимание, деревья в лесу
+  меняются случайным образом
+generatingFunc: |2-
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+      this.setPlayerPosition(0, 0);
+      this.addCustomTile('NY', 'https://kiddo-demo.000webhostapp.com/gift.svg');  
+      const gameField = [
+        ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],      
+        ['RO', 'BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'RO'],
+        ['RO', 'BU', 'RO', 'RO', 'RO', 'RO', 'RO', 'BU', 'RO'],
+        ['RO', 'BU', 'RO', 'BU', 'NY', 'BU', 'RO', 'BU', 'RO'],
+        ['RO', 'BU', 'RO', 'BU', 'FI', 'BU', 'RO', 'BU', 'RO'],
+        ['RO', 'BU', 'RO', 'BU', 'BU', 'BU', 'RO', 'BU', 'RO'],
+        ['RO', 'BU', 'RO', 'RO', 'RO', 'RO', 'RO', 'BU', 'RO'],      
+        ['RO', 'BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'RO'],      
+        ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],
+      ];
+      gameField[getRandomInt(2,6)][1] = 'RO';
+      if( getRandomInt(0,1) == 1 ){
+          gameField[4][5] = 'RO';
+      }else{
+          gameField[5][4] = 'RO';
+      }
+      this.setGameField(gameField);
+      this.addCheckingLogic('return this.player.position.x === 4 && this.player.position.y === 4 ? null : "FINISH_NOT_REACHED"');
