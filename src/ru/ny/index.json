@@ -1,0 +1,12 @@
+{
+  "title": "NY",
+  "description": "NY_DESCRIPTION",
+  "imageUrl": "/assets/images/ny.svg",
+  "tasks": [
+    "task1",
+    "task2",
+    "task3",
+    "task4",
+    "task5"
+  ]
+}
