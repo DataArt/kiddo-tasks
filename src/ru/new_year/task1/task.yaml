@@ -1,0 +1,12 @@
+sceneType: raccoon
+taskDescription: Доведи енота до флага под Новогодней Елочкой
+generatingFunc: |2-
+    this.setPlayerPosition(1, 3);
+    this.addCustomTile('NY', 'https://kiddo-demo.000webhostapp.com/christmas-tree-01.svg');  
+    this.setGameField([
+      ['BU', 'BU', 'NY', 'BU'],      
+      ['BU', 'RO', 'FI', 'BU'],
+      ['BU', 'RO', 'BU', 'BU'],
+      ['BU', 'RO', 'BU', 'BU'],
+    ]);
+    this.addCheckingLogic('return this.player.position.x === 2 && this.player.position.y === 1 ? null : "FINISH_NOT_REACHED"');
