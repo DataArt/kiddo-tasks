@@ -1,1 +1,5 @@
 .idea
+
+# Bundled player with assets (for hosting from local server)
+# copied from 'dist' folder from kiddo player's repo after npm run build:elements-prod
+elements
