@@ -1,7 +1,7 @@
 sceneType: raccoon
 taskDescription: >-
-  Проведи Енота в комнату с подарками. Осторожно, ключ от комнаты охраняет монстр!
-  Используй бомбу, чтобы добраться до ключа.
+  Lead the Raccoon to the room with gifts. Be careful, a monster guards the room's key!
+  Use the bomb to your advantage.
 generatingFunc: |2-
       function getRandomInt(min, max) {
           min = Math.ceil(min);

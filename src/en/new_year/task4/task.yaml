@@ -1,7 +1,7 @@
 sceneType: raccoon
 taskDescription: >-
-  Проведи Енота в комнату с подарками. Осторожно, ключ от комнаты охраняет монстр!
-  Используй бомбу, чтобы добраться до ключа.
+  Lead the Raccoon to the room with gifts. Be careful, a monster guards the room's key!
+  Use the bomb to your advantage.
 generatingFunc: |2-
       function getRandomInt(min, max) {
           min = Math.ceil(min);
@@ -10,9 +10,9 @@ generatingFunc: |2-
       }
         this.setPlayerPosition(0, 0);
         this.addCustomTile('NY',
-          'https://kiddo-demo.000webhostapp.com/gift.svg');
+          'https://kiddo.academy/tasks/assets/images/gift.svg');
         this.addCustomTile('WL',
-          'https://kiddo-demo.000webhostapp.com/wall.svg');
+          'https://kiddo.academy/tasks/assets/images/wall.svg');
         const gameField = [
           ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],
           ['RO', 'WL', 'WL', 'WL', 'WL', 'WL', 'WL', 'WL', 'RO'],
