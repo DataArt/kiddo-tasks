@@ -1,0 +1,31 @@
+sceneType: raccoon
+taskDescription: >-
+  Lead the Raccoon through the spruce forest to the gift. Note that the trees in the forest 
+  change their position randomly!
+generatingFunc: |2-
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+      this.setPlayerPosition(0, 0);
+      this.addCustomTile('NY', 'https://kiddo.academy/tasks/assets/images/gift.svg');  
+      const gameField = [
+        ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],      
+        ['RO', 'BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'RO'],
+        ['RO', 'BU', 'RO', 'RO', 'RO', 'RO', 'RO', 'BU', 'RO'],
+        ['RO', 'BU', 'RO', 'BU', 'NY', 'BU', 'RO', 'BU', 'RO'],
+        ['RO', 'BU', 'RO', 'BU', 'FI', 'BU', 'RO', 'BU', 'RO'],
+        ['RO', 'BU', 'RO', 'BU', 'BU', 'BU', 'RO', 'BU', 'RO'],
+        ['RO', 'BU', 'RO', 'RO', 'RO', 'RO', 'RO', 'BU', 'RO'],      
+        ['RO', 'BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'RO'],      
+        ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],
+      ];
+      gameField[getRandomInt(2,6)][1] = 'RO';
+      if( getRandomInt(0,1) == 1 ){
+          gameField[4][5] = 'RO';
+      }else{
+          gameField[5][4] = 'RO';
+      }
+      this.setGameField(gameField);
+      this.addCheckingLogic('return this.player.position.x === 4 && this.player.position.y === 4 ? null : "FINISH_NOT_REACHED"');

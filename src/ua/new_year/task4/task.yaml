@@ -1,0 +1,39 @@
+sceneType: raccoon
+taskDescription: >-
+  Lead the Raccoon to the room with gifts. Be careful, a monster guards the room's key!
+  Use the bomb to your advantage.
+generatingFunc: |2-
+      function getRandomInt(min, max) {
+          min = Math.ceil(min);
+          max = Math.floor(max);
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+        this.setPlayerPosition(0, 0);
+        this.addCustomTile('NY',
+          'https://kiddo-demo.000webhostapp.com/gift.svg');
+        this.addCustomTile('WL',
+          'https://kiddo-demo.000webhostapp.com/wall.svg');
+        const gameField = [
+          ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],
+          ['RO', 'WL', 'WL', 'WL', 'WL', 'WL', 'WL', 'WL', 'RO'],
+          ['RO', 'WL', 'RO', 'WL', 'RO', 'WL', 'RO', 'WL', 'RO'],
+          ['RO', 'WL', 'RO', 'WL', 'RO', 'WL', 'RO', 'RO', 'RO'],
+          ['RO', 'WL', 'WL', 'WL', 'WL', 'WL', 'RO', 'RO', 'RO'],
+          ['RO', 'WL', 'RO', 'RO', 'RO', 'WL', 'RO', 'RO', 'RO'],
+          ['RO', 'WL', 'RO', 'WL', 'RO', 'WL', 'WL', 'WL', 'WL'],
+          ['RO', 'WL', 'RO', 'WL', 'RO', 'WL', 'WL', 'NY', 'NY'],
+          ['RO', 'RO', 'RO', 'WL', 'RO', 'RO', 'RO', 'FI', 'NY'],
+        ];
+        this.addMonster([[7, 3],[7, 4],[7, 5]], 'DOWN');
+        this.addKey([6, 2], 'green');
+        this.addGate([6, 8], 'green');
+        this.addMines([4, 3]);
+        if( getRandomInt(0,1) == 1 ){
+            gameField[2][1] = 'RO';
+            gameField[3][3] = 'RO';
+        }else{
+            gameField[3][1] = 'RO';
+            gameField[2][3] = 'RO';
+        }
+        this.setGameField(gameField);
+        this.addCheckingLogic('return this.player.position.x === 4 && this.player.position.y === 4 ? null : "FINISH_NOT_REACHED"');
