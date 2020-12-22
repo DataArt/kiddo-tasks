@@ -1,5 +1,5 @@
 sceneType: raccoon
-taskDescription: 'обойди вокруг елочки, сразись с монстром и дойди до флага'
+taskDescription: 'Обойди вокруг елочки, сразись с монстрами и дойди до флага.'
 generatingFunc: |2-
         this.setPlayerPosition(3, 7);
         const gameField = [
