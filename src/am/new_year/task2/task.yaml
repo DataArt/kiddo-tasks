@@ -1,6 +1,6 @@
 sceneType: raccoon
 taskDescription: >-
-  Lead the Raccoon through the spruce forest to the gift. Note that the trees in the forest 
+  Lead the Raccoon through the forest to the gift. Note that the trees in the forest
   change their position randomly!
 generatingFunc: |2-
     function getRandomInt(min, max) {
