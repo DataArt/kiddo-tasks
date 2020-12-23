@@ -10,9 +10,9 @@ generatingFunc: |2-
       }
         this.setPlayerPosition(0, 0);
         this.addCustomTile('NY',
-          'https://kiddo-demo.000webhostapp.com/gift.svg');
+          'https://kiddo.academy/tasks/assets/images/gift.svg');
         this.addCustomTile('WL',
-          'https://kiddo-demo.000webhostapp.com/wall.svg');
+          'https://kiddo.academy/tasks/assets/images/wall.svg');
         const gameField = [
           ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],
           ['RO', 'WL', 'WL', 'WL', 'WL', 'WL', 'WL', 'WL', 'RO'],

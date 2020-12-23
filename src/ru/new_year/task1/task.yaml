@@ -2,7 +2,7 @@ sceneType: raccoon
 taskDescription: Доведи Енота до флага под новогодней елочкой.
 generatingFunc: |2-
     this.setPlayerPosition(1, 3);
-    this.addCustomTile('NY', 'https://kiddo-demo.000webhostapp.com/christmas-tree-01.svg');  
+    this.addCustomTile('NY', 'https://kiddo.academy/tasks/assets/images/christmas-tree.svg');  
     this.setGameField([
       ['BU', 'BU', 'NY', 'BU'],      
       ['BU', 'RO', 'FI', 'BU'],

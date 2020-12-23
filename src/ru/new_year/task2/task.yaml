@@ -9,7 +9,7 @@ generatingFunc: |2-
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
       this.setPlayerPosition(0, 0);
-      this.addCustomTile('NY', 'https://kiddo-demo.000webhostapp.com/gift.svg');  
+      this.addCustomTile('NY', 'https://kiddo.academy/tasks/assets/images/gift.svg');  
       const gameField = [
         ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],      
         ['RO', 'BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'BU', 'RO'],
