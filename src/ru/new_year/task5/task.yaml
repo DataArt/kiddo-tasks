@@ -1,0 +1,20 @@
+sceneType: console
+taskDescription: >-
+  Выведи в переменную "d" число дней в году, номер которого находится в переменной "a"
+  В високосном годе 366 дней, в обычном 365.
+  - Если год не делится на 4, значит он обычный.
+  - Иначе надо проверить не делится ли год на 100.
+  - Если не делится, значит это не столетие и можно сделать вывод, что год високосный.
+  - Если делится на 100, значит это столетие и его следует проверить его делимость на 400.
+  - Если год делится на 400, то он високосный.
+  - Иначе год обычный.
+
+generatingFunc: >2-
+  function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  this.addConsoleVariable('y', getRandomInt(100,2100));
+  this.addConsoleVariable('d');
+  this.addCheckingLogic('return  this.getVariableValue("d") === ((this.getVariableValue("y") % 4 !== 0 ||  (this.getVariableValue("y") % 100 == 0 &&this.getVariableValue("y") % 400 != 0))? 365 : 366)? null : "TASK_DONE_WRONG"');

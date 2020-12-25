@@ -1,0 +1,19 @@
+sceneType: raccoon
+taskDescription: 'Обойди вокруг елочки, сразись с монстрами и дойди до флага.'
+generatingFunc: |2-
+        this.setPlayerPosition(3, 7);
+        const gameField = [
+          ['RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO', 'RO'],
+          ['RO', 'RO', 'RO', 'RO', 'GR', 'RO', 'RO', 'RO', 'RO'],
+          ['RO', 'RO', 'RO', 'GR', 'GR', 'GR', 'RO', 'RO', 'RO'],
+          ['RO', 'RO', 'GR', 'GR', 'GR', 'GR', 'GR', 'RO', 'RO'],
+          ['RO', 'RO', 'RO', 'GR', 'GR', 'GR', 'RO', 'RO', 'RO'],
+          ['RO', 'RO', 'GR', 'GR', 'GR', 'GR', 'GR', 'RO', 'RO'],
+          ['RO', 'GR', 'GR', 'GR', 'GR', 'GR', 'GR', 'GR', 'RO'],
+          ['RO', 'RO', 'RO', 'RO', 'GR', 'FI', 'RO', 'RO', 'RO'],
+        ];
+        this.setGameField(gameField);
+        this.addMonster([[1, 0], [2, 0]], 'RIGHT');
+        this.addMonster([[5, 0], [6, 0]], 'RIGHT');
+        this.addTurrets([2, 4]);
+        this.addCheckingLogic('return this.player.position.x === 5 && this.player.position.y === 7 ? null : "FINISH_NOT_REACHED"');
